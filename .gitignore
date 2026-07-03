@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Storage / Checkpoints (Deep Learning)
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# Data / Result Folders (Exclude heavy datasets)
+data/
+results/
+output/
+checkpoint/
+
+# IDE / Editor folders
+.vscode/
+.idea/
