@@ -1,0 +1,82 @@
+{
+  "fig2_frequency_agile_bias": {
+    "distances_m": [
+      100,
+      200,
+      400,
+      600
+    ],
+    "fixed_32k_median_abs_bias_deg": [
+      0.5539378467083347,
+      0.17011457613708053,
+      0.4969707010128529,
+      0.6322766554426773
+    ],
+    "hop_average_median_abs_bias_deg": [
+      0.7504021971935995,
+      0.1818792820194335,
+      0.10761518409288201,
+      0.05328528936272553
+    ],
+    "reduction_pct": [
+      -35.46685817781092,
+      -6.915754163754206,
+      78.34576890075078,
+      91.57247244476885
+    ]
+  },
+  "fig3_static_600m_paired_rmse": {
+    "n": 20,
+    "fixed_mean_rmse_m": 13.00651823018237,
+    "hop_mean_rmse_m": 8.869753936032971,
+    "mean_improvement_m": 4.1367642941493985,
+    "improved_fraction": 0.7,
+    "wilcoxon_greater_p": 0.0008449554443359375
+  },
+  "fig4_moving_whitening_lag1": {
+    "n": 64,
+    "mean_lag1_fixed": 0.4699501789122653,
+    "mean_lag1_hop": -0.20808210107765762,
+    "whitening_p": 5.564409070405107e-10,
+    "pooled_moving_mean_gain_m": -0.10321251584048863,
+    "pooled_moving_p": 0.3009655989495688
+  },
+  "fig7_crlb_floor": {
+    "distances_m": [
+      100,
+      200,
+      400,
+      600
+    ],
+    "empirical_crlb_m": [
+      2.4137241854892286,
+      4.125852064863074,
+      7.847482051571683,
+      11.79952051737936
+    ],
+    "nls_rmse_m": [
+      2.095626360604569,
+      3.4707031023445554,
+      7.657693863857368,
+      13.376411216782987
+    ],
+    "routing_rmse_m": [
+      1.9236202965527418,
+      3.5166135756395223,
+      7.81305142134646,
+      12.292434121319513
+    ],
+    "routing_bias_floor_vs_emp_m": [
+      0.0,
+      0.0,
+      0.0,
+      3.446048778953041
+    ]
+  },
+  "interpretation": {
+    "paper_axis": "TOA/TDOA/DOA fused by UKF, with frequency-agile transmission used to whiten coherent multipath DOA bias.",
+    "positive_domain": "static/quasi-static long-range targets, especially 600 m in the current validation.",
+    "boundary": "moving targets show residual whitening but not reproducible RMSE improvement.",
+    "performance_floor": "sub-meter 600 m performance is not supported by the aperture/CRLB analysis under the current array and realistic noise assumptions."
+  }
+}
