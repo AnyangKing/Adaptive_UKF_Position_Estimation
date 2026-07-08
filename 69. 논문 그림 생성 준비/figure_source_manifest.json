@@ -1,0 +1,89 @@
+{
+  "purpose": "논문 그림 7종 생성 전 원천 데이터 감사",
+  "figure_sources": {
+    "fig1_system_concept": {
+      "kind": "conceptual",
+      "source": "논문_초고_구조.md + system/channel model code",
+      "status": "manual_drawing_needed",
+      "note": "시스템+게이트-내 표면반사 누설 개념도. 정량 JSON보다 원고 도식이 필요."
+    },
+    "fig2_bias_vs_carrier": {
+      "kind": "quantitative",
+      "source": "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json",
+      "status": "available"
+    },
+    "fig3_static_600m_paired_rmse": {
+      "kind": "quantitative",
+      "source": "61. 정지표적 도약 대규모 독립검증/results/static_hop_validation.json",
+      "status": "available"
+    },
+    "fig4_lag1_whitening": {
+      "kind": "quantitative",
+      "source": "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json",
+      "status": "available"
+    },
+    "fig5_static_moving_2x2_summary": {
+      "kind": "quantitative_summary",
+      "source": "59/61/63 README and JSON summaries",
+      "status": "partly_available",
+      "note": "61/63 JSON은 있음. 59는 README 수치 또는 재실행 결과 확인 필요."
+    },
+    "fig6_array_rotation_bias_correlation": {
+      "kind": "quantitative",
+      "source": "42. 다중 ping 기하 다양화 편향 식별성/results/geometry_diversity.json",
+      "status": "available"
+    },
+    "fig7_crlb_vs_rmse_floor": {
+      "kind": "quantitative",
+      "source": "45. CRLB 이론하한 대비 효율/results/crlb.json",
+      "status": "available"
+    }
+  },
+  "source_file_checks": {
+    "fig1_system_concept": null,
+    "fig2_bias_vs_carrier": true,
+    "fig3_static_600m_paired_rmse": true,
+    "fig4_lag1_whitening": true,
+    "fig5_static_moving_2x2_summary": null,
+    "fig6_array_rotation_bias_correlation": true,
+    "fig7_crlb_vs_rmse_floor": true
+  },
+  "key_numbers": {
+    "58_bias_carrier": {
+      "400m_hop_reduction_pct": 78.34576890075078,
+      "600m_hop_reduction_pct": 91.57247244476885,
+      "600m_bias_32k_deg": 0.6322766554426773,
+      "600m_bias_hopavg_deg": 0.05328528936272553
+    },
+    "61_static_validation": {
+      "600m_fixed_mean_rmse_m": 13.00651823018237,
+      "600m_hop_mean_rmse_m": 8.869753936032971,
+      "600m_mean_improvement_m": 4.136764294149399,
+      "600m_wilcoxon_p": 0.0008449554443359375,
+      "600m_fixed_median_rmse_m": 13.966343122135196,
+      "600m_hop_median_rmse_m": 7.957650011222869
+    },
+    "63_moving_boundary": {
+      "pooled_mean_gain_m": -0.10321251584048863,
+      "pooled_p": 0.3009655989495688,
+      "lag1_fixed_mean": 0.4699501789122653,
+      "lag1_hop_mean": -0.20808210107765762,
+      "lag1_p": 5.564409070405107e-10
+    },
+    "45_crlb_floor": {
+      "600m_crlb_empirical_m": 11.79952051737936,
+      "600m_routing_rmse_m": 12.292434121319513,
+      "600m_bias_floor_m": 3.446048778953041
+    },
+    "42_geometry_bias": {
+      "source_keys": [
+        "config",
+        "part_A_within_track",
+        "part_B_azimuth_rotation",
+        "raw_within"
+      ],
+      "note": "세부 구조가 그림 설계에 필요. README와 JSON을 함께 확인할 것."
+    }
+  },
+  "next_step": "70번에서 matplotlib 기반 실제 그림 생성 스크립트 작성 권장"
+}
