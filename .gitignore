@@ -23,3 +23,17 @@ checkpoint/
 # IDE / Editor folders
 .vscode/
 .idea/
+# LaTeX build artifacts (manuscript.tex lives at root; source-only in git)
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+manuscript.pdf
+_pass*.txt
+_latexmk_log.txt
+_bibtex.txt
