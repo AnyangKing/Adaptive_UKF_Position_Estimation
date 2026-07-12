@@ -14,6 +14,9 @@
 
 \graphicspath{{figures/}}
 
+% Absorb small overfull boxes from long inline math in narrow IEEE columns.
+\setlength{\emergencystretch}{3em}
+
 % Left-ragged wrapping column for wide content tables
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
@@ -104,7 +107,8 @@ localization literature. The distinction claimed here is not the first use of fr
 in USBL, but the identification and validation of carrier-agile whitening for post-gating
 coherent multipath DOA bias in a TOA/TDOA/DOA-UKF tracking loop.}
 \label{tab:priorart}
-\footnotesize
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
 \begin{tabularx}{\textwidth}{L c c L c c L}
 \toprule
 Literature family & Freq.\ diversity? & USBL pos.? & Main purpose in prior work &
@@ -213,9 +217,9 @@ band-limited GCC-PHAT over all 28 sensor pairs and is reduced to seven reference
 least squares. DOA uses SRP-PHAT on the 5~ms direct-path gate with a $2^{\circ}$ global grid
 refined to $0.2^{\circ}$. The UKF uses $\alpha=0.3$, $\beta=2$, $\kappa=0$, $\Delta t=1$~s,
 constant-velocity dynamics with white-acceleration process noise of standard deviation
-$0.20~\mathrm{m/s^2}$, initial covariance $\mathrm{diag}(8^2~\mathrm{m^2}\,I_3,
-1.5^2~\mathrm{(m/s)^2}\,I_3)$, and a fixed base measurement covariance built from 0.03~m
-TOA-range, 0.025~m per-sensor TDOA, and $2.0^{\circ}$ DOA standard deviations.
+$0.20~\mathrm{m/s^2}$, initial covariance $\mathrm{diag}(8^2~\mathrm{m^2}\,I_3,$
+$1.5^2~\mathrm{(m/s)^2}\,I_3)$, and a fixed base measurement covariance built from
+0.03~m TOA-range, 0.025~m per-sensor TDOA, and $2.0^{\circ}$ DOA standard deviations.
 
 \section{Post-Gating DOA Bias Floor}
 The first phase of the study tested whether better filtering, adaptive covariance, calibration,
@@ -349,7 +353,8 @@ to make the operating boundary explicit.
 \caption{Summary of positive and negative validation results. Positive RMSE gains are reported as
 fixed-carrier RMSE minus carrier-agile RMSE; positive values therefore favor carrier agility.}
 \label{tab:results}
-\footnotesize
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
 \begin{tabularx}{\textwidth}{L L L L L L}
 \toprule
 Regime / test & Baseline & Carrier-agile / tested condition & Main metric & Result &
@@ -428,7 +433,8 @@ limitations to concrete follow-up actions.
 \caption{Limitations and corresponding follow-up work, separated into submission-critical fixes,
 experimental validation, and future algorithmic extensions.}
 \label{tab:limitations}
-\footnotesize
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
 \begin{tabularx}{\textwidth}{L L L L L}
 \toprule
 Limitation / open item & Current evidence & Risk if unresolved & Follow-up action & Paper
