@@ -23,7 +23,7 @@ checkpoint/
 # IDE / Editor folders
 .vscode/
 .idea/
-# LaTeX build artifacts (manuscript.tex lives at root; source-only in git)
+# LaTeX build artifacts (paper lives in paper/; source-only in git). Ext globs match paper/ too.
 *.aux
 *.log
 *.bbl
@@ -34,6 +34,5 @@ checkpoint/
 *.fdb_latexmk
 *.synctex.gz
 manuscript.pdf
-_pass*.txt
-_latexmk_log.txt
-_bibtex.txt
+paper/manuscript.pdf
+_*.txt
