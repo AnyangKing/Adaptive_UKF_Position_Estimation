@@ -23,7 +23,11 @@ checkpoint/
 # IDE / Editor folders
 .vscode/
 .idea/
-# LaTeX build artifacts (paper lives in paper/; source-only in git). Ext globs match paper/ too.
+
+# Local manuscript workspace (do not publish paper sources/artifacts to GitHub)
+paper/
+
+# LaTeX build artifacts
 *.aux
 *.log
 *.bbl
