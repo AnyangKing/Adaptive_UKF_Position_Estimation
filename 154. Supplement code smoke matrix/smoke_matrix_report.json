@@ -1,0 +1,107 @@
+{
+  "schema": "supplement-code-smoke-matrix-1",
+  "case_count": 7,
+  "passed_count": 7,
+  "failed_count": 0,
+  "check_count": 23,
+  "records": [
+    {
+      "name": "145_two_ray_closure",
+      "script": "145. Two-ray mechanism evidence closure/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 1,
+      "stdout": [
+        "ok"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "45_crlb_floor",
+      "script": "45. CRLB 이론하한 대비 효율/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 3,
+      "stdout": [
+        "PASS test_crlb_grows_with_range",
+        "PASS test_crlb_positive_and_shape",
+        "PASS test_crlb_tightens_with_smaller_noise",
+        "all tests passed"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "58_carrier_sensitivity",
+      "script": "58. 반송파 미세도약 코히어런트 편향 진단/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 5,
+      "stdout": [
+        "PASS test_carriers_within_optimal_band",
+        "PASS test_cos_fit_null_on_noise",
+        "PASS test_cos_fit_recovers_synthetic",
+        "PASS test_delta_positive_and_reasonable",
+        "PASS test_el_bias_runs_single_carrier",
+        "all tests passed"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "61_static_validation",
+      "script": "61. 정지표적 도약 대규모 독립검증/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 3,
+      "stdout": [
+        "PASS test_collect_fixed_vs_hop_differ",
+        "PASS test_geometry_static",
+        "PASS test_hop_set_and_settle_window",
+        "all tests passed"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "63_moving_boundary",
+      "script": "63. 이동표적 도약 대규모검증 백색화 확인/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 1,
+      "stdout": [
+        "diagnostic tests passed"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "82_quasi_static_boundary",
+      "script": "82. 준정지 속도 경계 검증 실행/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 6,
+      "stdout": [
+        "PASS test_collect_runs_and_carrier_changes_observation",
+        "PASS test_conditions_cover_all_speeds_and_modes",
+        "PASS test_hop_carriers_within_optimal_band_and_distinct",
+        "PASS test_lag1_autocorr_known_cases",
+        "PASS test_moving_trajectory_matches_speed",
+        "PASS test_static_trajectory_is_stationary",
+        "all tests passed"
+      ],
+      "stderr": []
+    },
+    {
+      "name": "93_method_audit",
+      "script": "93. Method 세부 코드 대조/test_diagnostic.py",
+      "returncode": 0,
+      "passed": true,
+      "check_count": 4,
+      "stdout": [
+        "PASS test_adaptive_R_rule",
+        "PASS test_channel_and_array",
+        "PASS test_gate_and_filter",
+        "PASS test_protocols",
+        "all tests passed"
+      ],
+      "stderr": []
+    }
+  ]
+}
