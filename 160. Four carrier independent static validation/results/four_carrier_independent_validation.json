@@ -1,0 +1,1393 @@
+{
+  "config": {
+    "stage": "stage1b_independent_validation",
+    "distance_m": 600,
+    "geometries": 20,
+    "steps": 20,
+    "settle_start": 10,
+    "geometry_seed_root": 1600000,
+    "ping_seed_root": 1603000,
+    "common_random_ping_seeds": true,
+    "schedule_carriers_khz": {
+      "fixed32": [
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0,
+        32.0
+      ],
+      "linear20_30_34": [
+        30.0,
+        30.210526315789473,
+        30.421052631578945,
+        30.63157894736842,
+        30.842105263157894,
+        31.052631578947366,
+        31.263157894736842,
+        31.473684210526315,
+        31.68421052631579,
+        31.894736842105264,
+        32.10526315789474,
+        32.31578947368421,
+        32.526315789473685,
+        32.73684210526316,
+        32.94736842105263,
+        33.15789473684211,
+        33.36842105263158,
+        33.578947368421055,
+        33.78947368421053,
+        34.0
+      ],
+      "four_carrier_cycle": [
+        30.0,
+        31.333333333,
+        32.666666667,
+        34.0,
+        30.0,
+        31.333333333,
+        32.666666667,
+        34.0,
+        30.0,
+        31.333333333,
+        32.666666667,
+        34.0,
+        30.0,
+        31.333333333,
+        32.666666667,
+        34.0,
+        30.0,
+        31.333333333,
+        32.666666667,
+        34.0
+      ]
+    },
+    "development_only": false,
+    "independent_validation": true,
+    "protocol_frozen_before_execution": true,
+    "selection_source": "159. Reduced static schedule UKF pilot",
+    "automatic_manuscript_update_allowed": false
+  },
+  "summary": {
+    "fixed32": {
+      "mean_settled_rmse_m": 11.570888216159593,
+      "median_settled_rmse_m": 11.443127926966412,
+      "mean_p90_settled_error_m": 11.840326471316835,
+      "mean_abs_elevation_innovation_lag1": 0.7632696614476944,
+      "divergence_rate": 0.0,
+      "filter_exceptions": 0,
+      "n_geometries": 20
+    },
+    "linear20_30_34": {
+      "mean_settled_rmse_m": 8.7977890303815,
+      "median_settled_rmse_m": 7.765286636864459,
+      "mean_p90_settled_error_m": 9.889353073894473,
+      "mean_abs_elevation_innovation_lag1": 0.3358835352291357,
+      "divergence_rate": 0.0,
+      "filter_exceptions": 0,
+      "n_geometries": 20
+    },
+    "four_carrier_cycle": {
+      "mean_settled_rmse_m": 11.924792524663427,
+      "median_settled_rmse_m": 9.32263667457429,
+      "mean_p90_settled_error_m": 14.292148369813699,
+      "mean_abs_elevation_innovation_lag1": 0.3510133798834566,
+      "divergence_rate": 0.05,
+      "filter_exceptions": 0,
+      "n_geometries": 20
+    }
+  },
+  "comparisons": {
+    "linear_vs_fixed": {
+      "candidate": "linear20_30_34",
+      "reference": "fixed32",
+      "mean_gain_m": 2.7730991857780958,
+      "mean_gain_ci95_m": [
+        1.3617167285822507,
+        4.209532933264267
+      ],
+      "median_gain_m": 2.6243951174409768,
+      "improved_fraction": 0.75,
+      "p90_rmse_gain_m": 2.0747296389141088,
+      "mean_abs_lag1_reduction": 0.42738612621855854,
+      "wilcoxon_greater_p": 0.0015764236450195312,
+      "criteria": {
+        "mean_gain_positive": true,
+        "median_gain_positive": true,
+        "improved_fraction_ge_0_60": true,
+        "p90_rmse_not_worse": true,
+        "wilcoxon_greater_p_lt_0_05": true,
+        "no_candidate_divergence": true,
+        "mean_abs_lag1_reduced": true
+      },
+      "pass": true,
+      "n": 20
+    },
+    "four_vs_fixed": {
+      "candidate": "four_carrier_cycle",
+      "reference": "fixed32",
+      "mean_gain_m": -0.3539043085038319,
+      "mean_gain_ci95_m": [
+        -5.406211516463309,
+        2.8244556069390203
+      ],
+      "median_gain_m": 1.5345250909280654,
+      "improved_fraction": 0.7,
+      "p90_rmse_gain_m": -0.8423138922400781,
+      "mean_abs_lag1_reduction": 0.41225628156423755,
+      "wilcoxon_greater_p": 0.0291290283203125,
+      "criteria": {
+        "mean_gain_positive": false,
+        "median_gain_positive": true,
+        "improved_fraction_ge_0_60": true,
+        "p90_rmse_not_worse": false,
+        "wilcoxon_greater_p_lt_0_05": true,
+        "no_candidate_divergence": false,
+        "mean_abs_lag1_reduced": true
+      },
+      "pass": false,
+      "n": 20
+    },
+    "four_vs_linear": {
+      "candidate": "four_carrier_cycle",
+      "reference": "linear20_30_34",
+      "mean_gain_m": -3.127003494281927,
+      "mean_gain_ci95_m": [
+        -8.075385783636902,
+        -0.13802855751230853
+      ],
+      "median_gain_m": -0.4469301398938246,
+      "improved_fraction": 0.45,
+      "p90_rmse_gain_m": -2.917043531154187,
+      "mean_abs_lag1_reduction": -0.015129844654320972,
+      "wilcoxon_greater_p": 0.9430065155029297,
+      "criteria": {
+        "mean_gain_positive": false,
+        "median_gain_positive": false,
+        "improved_fraction_ge_0_60": false,
+        "p90_rmse_not_worse": false,
+        "wilcoxon_greater_p_lt_0_05": false,
+        "no_candidate_divergence": false
+      },
+      "pass": false,
+      "n": 20
+    }
+  },
+  "decision": "independent_validation_failed",
+  "trials": [
+    {
+      "geometry_index": 0,
+      "schedule_name": "fixed32",
+      "position_m": [
+        259.7283303997317,
+        -540.8707742037536,
+        -21.145594311507754
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8640777503768993,
+        "bottom_reflection": 0.5254777494547118,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 4.868242131963978,
+      "p90_settled_error_m": 4.893988729350368,
+      "elevation_innovation_lag1": 0.9991198885882412,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 0,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        259.7283303997317,
+        -540.8707742037536,
+        -21.145594311507754
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8640777503768993,
+        "bottom_reflection": 0.5254777494547118,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 4.503013351939103,
+      "p90_settled_error_m": 5.866046521916971,
+      "elevation_innovation_lag1": 0.16469376808543817,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 0,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        259.7283303997317,
+        -540.8707742037536,
+        -21.145594311507754
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8640777503768993,
+        "bottom_reflection": 0.5254777494547118,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.475288116912931,
+      "p90_settled_error_m": 6.9058128597035955,
+      "elevation_innovation_lag1": 0.39562083990922586,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 1,
+      "schedule_name": "fixed32",
+      "position_m": [
+        445.0347260666793,
+        402.42277842432793,
+        -38.298534675368465
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8364105107081549,
+        "bottom_reflection": 0.7356270870814192,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 28.52866883255721,
+      "p90_settled_error_m": 28.62863220139094,
+      "elevation_innovation_lag1": 0.9990167459211338,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 1,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        445.0347260666793,
+        402.42277842432793,
+        -38.298534675368465
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8364105107081549,
+        "bottom_reflection": 0.7356270870814192,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 26.97007747897373,
+      "p90_settled_error_m": 27.397810794082524,
+      "elevation_innovation_lag1": -0.28387445174870385,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 1,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        445.0347260666793,
+        402.42277842432793,
+        -38.298534675368465
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8364105107081549,
+        "bottom_reflection": 0.7356270870814192,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 20.962178377581452,
+      "p90_settled_error_m": 23.04632686873117,
+      "elevation_innovation_lag1": -0.4769637485333979,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 2,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -519.4761292751272,
+        -300.2408218636023,
+        -35.97884664510978
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8014680242437486,
+        "bottom_reflection": 0.6371852113596366,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.15059265482023,
+      "p90_settled_error_m": 10.375849428451225,
+      "elevation_innovation_lag1": 0.9989990920101738,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 2,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -519.4761292751272,
+        -300.2408218636023,
+        -35.97884664510978
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8014680242437486,
+        "bottom_reflection": 0.6371852113596366,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 53.00129101046352,
+      "p90_settled_error_m": 77.17116232527216,
+      "elevation_innovation_lag1": 0.9776930363624444,
+      "diverged": true,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 2,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -519.4761292751272,
+        -300.2408218636023,
+        -35.97884664510978
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8014680242437486,
+        "bottom_reflection": 0.6371852113596366,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.359864641771166,
+      "p90_settled_error_m": 7.610098527203308,
+      "elevation_innovation_lag1": 0.035922657379938286,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 3,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -41.157585548314806,
+        -598.5867131434118,
+        -19.4733253684183
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9517831356614953,
+        "bottom_reflection": 0.39241523698861736,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 15.062605305568264,
+      "p90_settled_error_m": 15.065255054309635,
+      "elevation_innovation_lag1": 0.9993315347059839,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 3,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -41.157585548314806,
+        -598.5867131434118,
+        -19.4733253684183
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9517831356614953,
+        "bottom_reflection": 0.39241523698861736,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.062138089268483,
+      "p90_settled_error_m": 12.765166337512605,
+      "elevation_innovation_lag1": 0.06262117162835161,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 3,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -41.157585548314806,
+        -598.5867131434118,
+        -19.4733253684183
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9517831356614953,
+        "bottom_reflection": 0.39241523698861736,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.604543083735374,
+      "p90_settled_error_m": 13.160892677057811,
+      "elevation_innovation_lag1": -0.03608773415132136,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 4,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -538.9532760612746,
+        263.68421686331476,
+        -15.698378790386862
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.9628832474812066,
+        "bottom_reflection": 0.7644359726794325,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.318241141666614,
+      "p90_settled_error_m": 7.470824487753637,
+      "elevation_innovation_lag1": -0.03632764952508572,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 4,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -538.9532760612746,
+        263.68421686331476,
+        -15.698378790386862
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.9628832474812066,
+        "bottom_reflection": 0.7644359726794325,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 6.34561340013487,
+      "p90_settled_error_m": 7.121932054503247,
+      "elevation_innovation_lag1": -0.6175647227499965,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 4,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -538.9532760612746,
+        263.68421686331476,
+        -15.698378790386862
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.9628832474812066,
+        "bottom_reflection": 0.7644359726794325,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.307393525856157,
+      "p90_settled_error_m": 8.236907178932258,
+      "elevation_innovation_lag1": 0.054285733097645845,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 5,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -589.9888882486595,
+        109.14720217720098,
+        -75.32561460323879
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9691832234467689,
+        "bottom_reflection": 0.5500056491607385,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 3.465404160645213,
+      "p90_settled_error_m": 3.8222047227118825,
+      "elevation_innovation_lag1": 0.5179958503089779,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 5,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -589.9888882486595,
+        109.14720217720098,
+        -75.32561460323879
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9691832234467689,
+        "bottom_reflection": 0.5500056491607385,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 9.029942825426204,
+      "p90_settled_error_m": 9.276967039733359,
+      "elevation_innovation_lag1": 0.9402766004709244,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 5,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -589.9888882486595,
+        109.14720217720098,
+        -75.32561460323879
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9691832234467689,
+        "bottom_reflection": 0.5500056491607385,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.534565142060039,
+      "p90_settled_error_m": 6.594768664328286,
+      "elevation_innovation_lag1": 0.230398006708317,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 6,
+      "schedule_name": "fixed32",
+      "position_m": [
+        575.8459674746053,
+        168.52721365772283,
+        -32.85668946097631
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8552701186785394,
+        "bottom_reflection": 0.7508741561382639,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 13.951307115224186,
+      "p90_settled_error_m": 14.547123787330623,
+      "elevation_innovation_lag1": 0.9988659046485612,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 6,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        575.8459674746053,
+        168.52721365772283,
+        -32.85668946097631
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8552701186785394,
+        "bottom_reflection": 0.7508741561382639,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.660278042889802,
+      "p90_settled_error_m": 8.90173591628391,
+      "elevation_innovation_lag1": -0.011920087947610847,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 6,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        575.8459674746053,
+        168.52721365772283,
+        -32.85668946097631
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8552701186785394,
+        "bottom_reflection": 0.7508741561382639,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.198644355383699,
+      "p90_settled_error_m": 5.690564435541937,
+      "elevation_innovation_lag1": -0.7787511285248501,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 7,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -420.8732745613181,
+        -427.62797705486173,
+        -17.21318341393725
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8185875929335593,
+        "bottom_reflection": 0.5732841074548767,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 9.735393680032322,
+      "p90_settled_error_m": 9.886793303657939,
+      "elevation_innovation_lag1": 0.10007571582794791,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 7,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -420.8732745613181,
+        -427.62797705486173,
+        -17.21318341393725
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8185875929335593,
+        "bottom_reflection": 0.5732841074548767,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.9032318806937925,
+      "p90_settled_error_m": 6.309160656038261,
+      "elevation_innovation_lag1": -0.9178574796209974,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 7,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -420.8732745613181,
+        -427.62797705486173,
+        -17.21318341393725
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.8185875929335593,
+        "bottom_reflection": 0.5732841074548767,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.643660388449058,
+      "p90_settled_error_m": 6.648302434205553,
+      "elevation_innovation_lag1": -0.15959985448550992,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 8,
+      "schedule_name": "fixed32",
+      "position_m": [
+        457.96653406532727,
+        -387.6424301804324,
+        -22.518606588148884
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7763815036280308,
+        "bottom_reflection": 0.3280373841427642,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.541986367435296,
+      "p90_settled_error_m": 14.814433673727368,
+      "elevation_innovation_lag1": -0.10579758127570775,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 8,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        457.96653406532727,
+        -387.6424301804324,
+        -22.518606588148884
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7763815036280308,
+        "bottom_reflection": 0.3280373841427642,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 14.45729928833639,
+      "p90_settled_error_m": 17.44027918131432,
+      "elevation_innovation_lag1": -0.32666886238840176,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 8,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        457.96653406532727,
+        -387.6424301804324,
+        -22.518606588148884
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7763815036280308,
+        "bottom_reflection": 0.3280373841427642,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 9.29911981037569,
+      "p90_settled_error_m": 12.373430880348092,
+      "elevation_innovation_lag1": -0.11742896615691495,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 9,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -164.54485760778715,
+        -576.9965249763928,
+        -48.92917678347075
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.833184196410337,
+        "bottom_reflection": 0.5892974916716545,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.898632796459601,
+      "p90_settled_error_m": 12.91371650864661,
+      "elevation_innovation_lag1": 0.9991619785203859,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 9,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -164.54485760778715,
+        -576.9965249763928,
+        -48.92917678347075
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.833184196410337,
+        "bottom_reflection": 0.5892974916716545,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.991520923124577,
+      "p90_settled_error_m": 18.71600156395995,
+      "elevation_innovation_lag1": 0.17380937454787765,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 9,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -164.54485760778715,
+        -576.9965249763928,
+        -48.92917678347075
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.833184196410337,
+        "bottom_reflection": 0.5892974916716545,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 14.474448008841158,
+      "p90_settled_error_m": 18.466025201440367,
+      "elevation_innovation_lag1": 0.22397510259959225,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 10,
+      "schedule_name": "fixed32",
+      "position_m": [
+        70.88081287987814,
+        595.798548475479,
+        -52.749971497827154
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8267593864996707,
+        "bottom_reflection": 0.4250142948179816,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 14.541216367174671,
+      "p90_settled_error_m": 14.556827928264676,
+      "elevation_innovation_lag1": 0.9991896825452783,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 10,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        70.88081287987814,
+        595.798548475479,
+        -52.749971497827154
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8267593864996707,
+        "bottom_reflection": 0.4250142948179816,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.440978955301372,
+      "p90_settled_error_m": 11.123639781601687,
+      "elevation_innovation_lag1": -0.2563713860879153,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 10,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        70.88081287987814,
+        595.798548475479,
+        -52.749971497827154
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8267593864996707,
+        "bottom_reflection": 0.4250142948179816,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.386962949292599,
+      "p90_settled_error_m": 9.19256611157293,
+      "elevation_innovation_lag1": -0.22723107196225784,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 11,
+      "schedule_name": "fixed32",
+      "position_m": [
+        552.0482475144528,
+        235.037725517036,
+        -13.293317524670567
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8621317917490818,
+        "bottom_reflection": 0.6931295144420226,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 11.791706749573306,
+      "p90_settled_error_m": 11.832500779028537,
+      "elevation_innovation_lag1": 0.9990414708719529,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 11,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        552.0482475144528,
+        235.037725517036,
+        -13.293317524670567
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8621317917490818,
+        "bottom_reflection": 0.6931295144420226,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.281247921300652,
+      "p90_settled_error_m": 11.846393227946653,
+      "elevation_innovation_lag1": 0.22901592340469962,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 11,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        552.0482475144528,
+        235.037725517036,
+        -13.293317524670567
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8621317917490818,
+        "bottom_reflection": 0.6931295144420226,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 11.70588966760948,
+      "p90_settled_error_m": 13.238479579401055,
+      "elevation_innovation_lag1": 0.6020811753252997,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 12,
+      "schedule_name": "fixed32",
+      "position_m": [
+        145.21989710738413,
+        -582.1607866252422,
+        -59.469041180101854
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7559406641832122,
+        "bottom_reflection": 0.44890375655678333,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.700342406303201,
+      "p90_settled_error_m": 7.700527928703006,
+      "elevation_innovation_lag1": 0.9980306747289487,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 12,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        145.21989710738413,
+        -582.1607866252422,
+        -59.469041180101854
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7559406641832122,
+        "bottom_reflection": 0.44890375655678333,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 5.183760319802029,
+      "p90_settled_error_m": 5.424333899764552,
+      "elevation_innovation_lag1": -0.1436969070385617,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 12,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        145.21989710738413,
+        -582.1607866252422,
+        -59.469041180101854
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7559406641832122,
+        "bottom_reflection": 0.44890375655678333,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.030292007163559,
+      "p90_settled_error_m": 7.96994492570314,
+      "elevation_innovation_lag1": 0.4887482463859011,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 13,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -577.7803664316627,
+        -161.77097442400955,
+        -77.69822772759291
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8200840364563209,
+        "bottom_reflection": 0.6893106738028384,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.094453235868395,
+      "p90_settled_error_m": 7.095427594755486,
+      "elevation_innovation_lag1": 0.9994228853070637,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 13,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -577.7803664316627,
+        -161.77097442400955,
+        -77.69822772759291
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8200840364563209,
+        "bottom_reflection": 0.6893106738028384,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 2.63833392242356,
+      "p90_settled_error_m": 2.92932447954248,
+      "elevation_innovation_lag1": 0.08880322965936867,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 13,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -577.7803664316627,
+        -161.77097442400955,
+        -77.69822772759291
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8200840364563209,
+        "bottom_reflection": 0.6893106738028384,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 3.3426045048726003,
+      "p90_settled_error_m": 3.9976167070449495,
+      "elevation_innovation_lag1": 0.04278354209836674,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 14,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -384.83738783035966,
+        -460.3261723255645,
+        -19.900366455295917
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7710249962071564,
+        "bottom_reflection": 0.4135861546646078,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 13.386415033219636,
+      "p90_settled_error_m": 13.410735109779573,
+      "elevation_innovation_lag1": 0.9990645883526882,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 14,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -384.83738783035966,
+        -460.3261723255645,
+        -19.900366455295917
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7710249962071564,
+        "bottom_reflection": 0.4135861546646078,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.815877560996865,
+      "p90_settled_error_m": 9.780740350947747,
+      "elevation_innovation_lag1": -0.1719798812472072,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 14,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -384.83738783035966,
+        -460.3261723255645,
+        -19.900366455295917
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.7710249962071564,
+        "bottom_reflection": 0.4135861546646078,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.151241688433653,
+      "p90_settled_error_m": 7.807961437940861,
+      "elevation_innovation_lag1": -0.2529975193523028,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 15,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -599.9260904354215,
+        -9.417325250324323,
+        -37.019915675974715
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8991429125828645,
+        "bottom_reflection": 0.41038896201038716,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 11.094549104359519,
+      "p90_settled_error_m": 11.410426854340093,
+      "elevation_innovation_lag1": 0.9990147654272419,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 15,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -599.9260904354215,
+        -9.417325250324323,
+        -37.019915675974715
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8991429125828645,
+        "bottom_reflection": 0.41038896201038716,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.823315448272409,
+      "p90_settled_error_m": 12.279116475283312,
+      "elevation_innovation_lag1": 0.30186735360748973,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 15,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -599.9260904354215,
+        -9.417325250324323,
+        -37.019915675974715
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.8991429125828645,
+        "bottom_reflection": 0.41038896201038716,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 12.21052236940248,
+      "p90_settled_error_m": 12.798069664890958,
+      "elevation_innovation_lag1": 0.08071342110245713,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 16,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -132.0197416325914,
+        585.2954705268646,
+        -59.55543438250852
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.951474609776443,
+        "bottom_reflection": 0.7709147166129007,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.19571536554213,
+      "p90_settled_error_m": 10.198580650309973,
+      "elevation_innovation_lag1": 0.9991411762108534,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 16,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -132.0197416325914,
+        585.2954705268646,
+        -59.55543438250852
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.951474609776443,
+        "bottom_reflection": 0.7709147166129007,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 10.555198162159577,
+      "p90_settled_error_m": 11.535767516685766,
+      "elevation_innovation_lag1": 0.30768446034487257,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 16,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -132.0197416325914,
+        585.2954705268646,
+        -59.55543438250852
+      ],
+      "environment": {
+        "snr_db": 30.0,
+        "surface_reflection": -0.951474609776443,
+        "bottom_reflection": 0.7709147166129007,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.38034667671115,
+      "p90_settled_error_m": 8.908665284504053,
+      "elevation_innovation_lag1": 0.637959623218819,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 17,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -397.4553226730579,
+        -449.47665843606984,
+        -42.416304760134665
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7364331521554084,
+        "bottom_reflection": 0.5769147839827435,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 13.761511060888765,
+      "p90_settled_error_m": 14.272196494259507,
+      "elevation_innovation_lag1": -0.13645786399154528,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 17,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -397.4553226730579,
+        -449.47665843606984,
+        -42.416304760134665
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7364331521554084,
+        "bottom_reflection": 0.5769147839827435,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 9.61533052372238,
+      "p90_settled_error_m": 10.845865156551453,
+      "elevation_innovation_lag1": -0.1688153498787222,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 17,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -397.4553226730579,
+        -449.47665843606984,
+        -42.416304760134665
+      ],
+      "environment": {
+        "snr_db": 10.0,
+        "surface_reflection": -0.7364331521554084,
+        "bottom_reflection": 0.5769147839827435,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.170708631957751,
+      "p90_settled_error_m": 8.956943230812215,
+      "elevation_innovation_lag1": -0.5106504090349983,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 18,
+      "schedule_name": "fixed32",
+      "position_m": [
+        62.78837685750152,
+        596.7056390982076,
+        -75.54802957711561
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8703144661081197,
+        "bottom_reflection": 0.4120637382801301,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.486333386552452,
+      "p90_settled_error_m": 8.516359781393067,
+      "elevation_innovation_lag1": 0.999038309976716,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 18,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        62.78837685750152,
+        596.7056390982076,
+        -75.54802957711561
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8703144661081197,
+        "bottom_reflection": 0.4120637382801301,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.653952441912653,
+      "p90_settled_error_m": 8.682505131353926,
+      "elevation_innovation_lag1": 0.6952495577066826,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 18,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        62.78837685750152,
+        596.7056390982076,
+        -75.54802957711561
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.8703144661081197,
+        "bottom_reflection": 0.4120637382801301,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 8.788346502636331,
+      "p90_settled_error_m": 8.824869515355461,
+      "elevation_innovation_lag1": 0.9114657452974908,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 19,
+      "schedule_name": "fixed32",
+      "position_m": [
+        -168.75910627312416,
+        575.778051031729,
+        -58.65464568663564
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9664148837827342,
+        "bottom_reflection": 0.5971961015154,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 14.844447427336931,
+      "p90_settled_error_m": 15.394124408172575,
+      "elevation_innovation_lag1": 0.38229987020939693,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 19,
+      "schedule_name": "four_carrier_cycle",
+      "position_m": [
+        -168.75910627312416,
+        575.778051031729,
+        -58.65464568663564
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9664148837827342,
+        "bottom_reflection": 0.5971961015154,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 7.563448946126595,
+      "p90_settled_error_m": 10.429018985979141,
+      "elevation_innovation_lag1": 0.17980399314286746,
+      "diverged": false,
+      "filter_exceptions": 0
+    },
+    {
+      "geometry_index": 19,
+      "schedule_name": "linear20_30_34",
+      "position_m": [
+        -168.75910627312416,
+        575.778051031729,
+        -58.65464568663564
+      ],
+      "environment": {
+        "snr_db": 20.0,
+        "surface_reflection": -0.9664148837827342,
+        "bottom_reflection": 0.5971961015154,
+        "radial_velocity_m_s": 0.0
+      },
+      "settled_rmse_m": 6.92916015858368,
+      "p90_settled_error_m": 7.358815293171423,
+      "elevation_innovation_lag1": 0.4540061792581077,
+      "diverged": false,
+      "filter_exceptions": 0
+    }
+  ]
+}
