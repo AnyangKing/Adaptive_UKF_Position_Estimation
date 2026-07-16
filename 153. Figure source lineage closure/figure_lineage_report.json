@@ -1,0 +1,213 @@
+{
+  "schema": "figure-source-lineage-1",
+  "figure_count": 7,
+  "byte_identical_count": 7,
+  "pixel_identical_count": 7,
+  "all_generators_present": true,
+  "all_data_sources_present": true,
+  "records": [
+    {
+      "name": "fig1_system_concept.png",
+      "paper": "paper/figures/fig1_system_concept.png",
+      "reference": "101. Fig1 visual polish/figures/fig1_system_concept_polished.png",
+      "generator": "101. Fig1 visual polish/make_fig1_polished.py",
+      "data": [],
+      "paper_bytes": 477109,
+      "paper_sha256": "8D05016288D2C5D08F81E3CB4DD5219083FD473A09DD617D88E6EE1BFAE05732",
+      "reference_bytes": 477109,
+      "reference_sha256": "8D05016288D2C5D08F81E3CB4DD5219083FD473A09DD617D88E6EE1BFAE05732",
+      "generator_sha256": "A4987DCDB300BC2980BF3B424772C06AB050C99BD670CA7F7CB53B5DABE706FD",
+      "data_sha256": {},
+      "byte_identical": true,
+      "paper_size_px": [
+        4571,
+        1896
+      ],
+      "reference_size_px": [
+        4571,
+        1896
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig2_frequency_agile_bias.png",
+      "paper": "paper/figures/fig2_frequency_agile_bias.png",
+      "reference": "95. Fig5 PNG and submission packaging/figures/fig2_frequency_agile_bias.png",
+      "generator": "70. 논문 그림 1차 생성/generate_core_figures.py",
+      "data": [
+        "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json"
+      ],
+      "paper_bytes": 95294,
+      "paper_sha256": "CEC40564C317612BF093BD3017CA270626E350A4360218E7A50736C650FBAAB2",
+      "reference_bytes": 95294,
+      "reference_sha256": "CEC40564C317612BF093BD3017CA270626E350A4360218E7A50736C650FBAAB2",
+      "generator_sha256": "81862384AFA33737869B8CC722488B1EB95897D63AF96293B3FC1A84D84BE212",
+      "data_sha256": {
+        "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json": "6ECD4375FF29165EE2A2B13D51B7FA64BBC3E82933D4FF3BC7B5B79042FF0D3B"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1994,
+        1151
+      ],
+      "reference_size_px": [
+        1994,
+        1151
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig3_static_600m_paired_rmse.png",
+      "paper": "paper/figures/fig3_static_600m_paired_rmse.png",
+      "reference": "95. Fig5 PNG and submission packaging/figures/fig3_static_600m_paired_rmse.png",
+      "generator": "70. 논문 그림 1차 생성/generate_core_figures.py",
+      "data": [
+        "61. 정지표적 도약 대규모 독립검증/results/static_hop_validation.json"
+      ],
+      "paper_bytes": 261909,
+      "paper_sha256": "11467A68D1413326A1A2DEE4EDE26FA232CED6FC1B81FEE1B8843D712FAA7D28",
+      "reference_bytes": 261909,
+      "reference_sha256": "11467A68D1413326A1A2DEE4EDE26FA232CED6FC1B81FEE1B8843D712FAA7D28",
+      "generator_sha256": "81862384AFA33737869B8CC722488B1EB95897D63AF96293B3FC1A84D84BE212",
+      "data_sha256": {
+        "61. 정지표적 도약 대규모 독립검증/results/static_hop_validation.json": "7D85E90F406CB082D7F40E53E806DE1AFC647289B48D0B63AC2BD55CD7A5E8D1"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1987,
+        1151
+      ],
+      "reference_size_px": [
+        1987,
+        1151
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig4_moving_whitening_lag1.png",
+      "paper": "paper/figures/fig4_moving_whitening_lag1.png",
+      "reference": "95. Fig5 PNG and submission packaging/figures/fig4_moving_whitening_lag1.png",
+      "generator": "70. 논문 그림 1차 생성/generate_core_figures.py",
+      "data": [
+        "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json"
+      ],
+      "paper_bytes": 494597,
+      "paper_sha256": "30E3AE03C8CC379896FDD70B987E4862023B158D3DE2A81BB576B1A89FB7BEE8",
+      "reference_bytes": 494597,
+      "reference_sha256": "30E3AE03C8CC379896FDD70B987E4862023B158D3DE2A81BB576B1A89FB7BEE8",
+      "generator_sha256": "81862384AFA33737869B8CC722488B1EB95897D63AF96293B3FC1A84D84BE212",
+      "data_sha256": {
+        "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json": "2CC68FF4A5E0F1237216345B340442525CB28D9E85A11A1B6E8F45C85A27002D"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1994,
+        1151
+      ],
+      "reference_size_px": [
+        1994,
+        1151
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig5_quasi_static_speed_boundary.png",
+      "paper": "paper/figures/fig5_quasi_static_speed_boundary.png",
+      "reference": "95. Fig5 PNG and submission packaging/figures/fig5_quasi_static_speed_boundary.png",
+      "generator": "95. Fig5 PNG and submission packaging/generate_fig5_png.py",
+      "data": [
+        "82. 준정지 속도 경계 검증 실행/results/quasi_static_boundary.json",
+        "82. 준정지 속도 경계 검증 실행/results/quasi_static_trials.csv"
+      ],
+      "paper_bytes": 179563,
+      "paper_sha256": "99231CED6F162996428EE1B3E66D2357E83168802D59243D3E8E59624097368C",
+      "reference_bytes": 179563,
+      "reference_sha256": "99231CED6F162996428EE1B3E66D2357E83168802D59243D3E8E59624097368C",
+      "generator_sha256": "35DB8A798A844CC912E6B058B284F08DE5ADF784E7A257A388DCDE5E151CB877",
+      "data_sha256": {
+        "82. 준정지 속도 경계 검증 실행/results/quasi_static_boundary.json": "4D15F10F0F1743F27A29A392A73512958FC9ADD31270995F4B552A5E47EBB06B",
+        "82. 준정지 속도 경계 검증 실행/results/quasi_static_trials.csv": "74A2E908E8CCCCE2A49B76ADFCA05D6308035110334536EC382D73BEE05ED4E2"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1672,
+        924
+      ],
+      "reference_size_px": [
+        1672,
+        924
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig6_crlb_floor.png",
+      "paper": "paper/figures/fig6_crlb_floor.png",
+      "reference": "95. Fig5 PNG and submission packaging/figures/fig6_crlb_floor.png",
+      "generator": "70. 논문 그림 1차 생성/generate_core_figures.py",
+      "data": [
+        "45. CRLB 이론하한 대비 효율/results/crlb.json"
+      ],
+      "paper_bytes": 155194,
+      "paper_sha256": "8E032ADD037FEDE683AA2CFE5A250716FCA962CEB6F540705DABCA00DA2CFABB",
+      "reference_bytes": 155194,
+      "reference_sha256": "8E032ADD037FEDE683AA2CFE5A250716FCA962CEB6F540705DABCA00DA2CFABB",
+      "generator_sha256": "81862384AFA33737869B8CC722488B1EB95897D63AF96293B3FC1A84D84BE212",
+      "data_sha256": {
+        "45. CRLB 이론하한 대비 효율/results/crlb.json": "E0390800601613B4274F5EC36A6B38EAA90CC9E290BE84DB9E2C8FCCB11BFCD7"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1995,
+        1151
+      ],
+      "reference_size_px": [
+        1995,
+        1151
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    },
+    {
+      "name": "fig_tworay_fit.png",
+      "paper": "paper/figures/fig_tworay_fit.png",
+      "reference": "153. Figure source lineage closure/fig_tworay_fit_reproduced.png",
+      "generator": "138. 이론-실측 오버레이 그림/generate_tworay_fit_figure.py",
+      "data": [
+        "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json",
+        "145. Two-ray mechanism evidence closure/results/two_ray_fit.json"
+      ],
+      "paper_bytes": 159608,
+      "paper_sha256": "DE3D71050CA6BF86024604F3F1DC66D259E65B9D6257158076D6D8CE7E4E7C8C",
+      "reference_bytes": 159608,
+      "reference_sha256": "DE3D71050CA6BF86024604F3F1DC66D259E65B9D6257158076D6D8CE7E4E7C8C",
+      "generator_sha256": "8F4AA24F266EDFF98A75426EC87EBBBD21666024F396D5816F88658DF9B7A2BA",
+      "data_sha256": {
+        "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json": "6ECD4375FF29165EE2A2B13D51B7FA64BBC3E82933D4FF3BC7B5B79042FF0D3B",
+        "145. Two-ray mechanism evidence closure/results/two_ray_fit.json": "47087B3B1A67FEB2EEEE74A6C087AA35EED1A6C34CEA1410DE951788D950BB7C"
+      },
+      "byte_identical": true,
+      "paper_size_px": [
+        1050,
+        1320
+      ],
+      "reference_size_px": [
+        1050,
+        1320
+      ],
+      "same_size": true,
+      "exact_pixels": true,
+      "mean_abs_rgba_difference": 0.0
+    }
+  ]
+}
