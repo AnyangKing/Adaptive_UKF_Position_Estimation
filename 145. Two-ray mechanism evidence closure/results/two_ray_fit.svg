@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial, sans-serif;} .axis{stroke:#222;stroke-width:1.2} .grid{stroke:#ddd;stroke-width:1} .fit{fill:none;stroke:#d94801;stroke-width:2.2} .meas{fill:#1f78b4;stroke:white;stroke-width:1}</style>
+<text x="225.0" y="24" text-anchor="middle" font-size="16" font-weight="bold">400 m, index 1: δ=1.337 ms, R²=0.995</text>
+<line class="grid" x1="58.0" y1="382.0" x2="428.0" y2="382.0"/>
+<line class="grid" x1="58.0" y1="296.0" x2="428.0" y2="296.0"/>
+<line class="grid" x1="58.0" y1="210.0" x2="428.0" y2="210.0"/>
+<line class="grid" x1="58.0" y1="124.0" x2="428.0" y2="124.0"/>
+<line class="grid" x1="58.0" y1="38.0" x2="428.0" y2="38.0"/>
+<line class="axis" x1="58.0" y1="382.0" x2="428.0" y2="382.0"/>
+<line class="axis" x1="58.0" y1="38.0" x2="58.0" y2="382.0"/>
+<polyline class="fit" points="58.0,321.6 81.1,90.5 104.2,86.3 127.4,321.6 150.5,88.2 173.6,88.6 196.8,321.6 219.9,85.9 243.0,90.9 266.1,321.6 289.2,83.6 312.4,93.3 335.5,321.5 358.6,81.4 381.8,95.7 404.9,321.3 428.0,79.1"/>
+<circle class="meas" cx="58.0" cy="316.1" r="4.5"/>
+<circle class="meas" cx="81.1" cy="87.6" r="4.5"/>
+<circle class="meas" cx="104.2" cy="87.6" r="4.5"/>
+<circle class="meas" cx="127.4" cy="348.7" r="4.5"/>
+<circle class="meas" cx="150.5" cy="87.6" r="4.5"/>
+<circle class="meas" cx="173.6" cy="87.6" r="4.5"/>
+<circle class="meas" cx="196.8" cy="316.1" r="4.5"/>
+<circle class="meas" cx="219.9" cy="87.6" r="4.5"/>
+<circle class="meas" cx="243.0" cy="87.6" r="4.5"/>
+<circle class="meas" cx="266.1" cy="316.1" r="4.5"/>
+<circle class="meas" cx="289.2" cy="87.6" r="4.5"/>
+<circle class="meas" cx="312.4" cy="87.6" r="4.5"/>
+<circle class="meas" cx="335.5" cy="316.1" r="4.5"/>
+<circle class="meas" cx="358.6" cy="87.6" r="4.5"/>
+<circle class="meas" cx="381.8" cy="103.9" r="4.5"/>
+<circle class="meas" cx="404.9" cy="316.1" r="4.5"/>
+<circle class="meas" cx="428.0" cy="71.3" r="4.5"/>
+<text x="225.0" y="422" text-anchor="middle" font-size="13">carrier frequency (kHz)</text>
+<text x="16.0" y="50.0" font-size="12">el. bias (deg)</text>
+<text x="318.0" y="60.0" font-size="12" fill="#1f78b4">dots: measured</text>
+<text x="318.0" y="78.0" font-size="12" fill="#d94801">line: two-ray fit</text>
+<text x="675.0" y="24" text-anchor="middle" font-size="16" font-weight="bold">600 m, index 5: δ=1.875 ms, R²=0.750</text>
+<line class="grid" x1="508.0" y1="382.0" x2="878.0" y2="382.0"/>
+<line class="grid" x1="508.0" y1="296.0" x2="878.0" y2="296.0"/>
+<line class="grid" x1="508.0" y1="210.0" x2="878.0" y2="210.0"/>
+<line class="grid" x1="508.0" y1="124.0" x2="878.0" y2="124.0"/>
+<line class="grid" x1="508.0" y1="38.0" x2="878.0" y2="38.0"/>
+<line class="axis" x1="508.0" y1="382.0" x2="878.0" y2="382.0"/>
+<line class="axis" x1="508.0" y1="38.0" x2="508.0" y2="382.0"/>
+<polyline class="fit" points="508.0,240.1 531.1,107.1 554.2,272.2 577.4,81.5 600.5,290.4 623.6,71.3 646.8,292.1 669.9,78.1 693.0,277.0 716.1,100.9 739.2,247.4 762.4,136.2 785.5,207.8 808.6,178.5 831.8,164.4 854.9,221.4 878.0,123.7"/>
+<circle class="meas" cx="508.0" cy="177.8" r="4.5"/>
+<circle class="meas" cx="531.1" cy="120.8" r="4.5"/>
+<circle class="meas" cx="554.2" cy="337.3" r="4.5"/>
+<circle class="meas" cx="577.4" cy="120.8" r="4.5"/>
+<circle class="meas" cx="600.5" cy="348.7" r="4.5"/>
+<circle class="meas" cx="623.6" cy="109.4" r="4.5"/>
+<circle class="meas" cx="646.8" cy="348.7" r="4.5"/>
+<circle class="meas" cx="669.9" cy="109.4" r="4.5"/>
+<circle class="meas" cx="693.0" cy="303.1" r="4.5"/>
+<circle class="meas" cx="716.1" cy="109.4" r="4.5"/>
+<circle class="meas" cx="739.2" cy="211.9" r="4.5"/>
+<circle class="meas" cx="762.4" cy="120.8" r="4.5"/>
+<circle class="meas" cx="785.5" cy="132.2" r="4.5"/>
+<circle class="meas" cx="808.6" cy="120.8" r="4.5"/>
+<circle class="meas" cx="831.8" cy="120.8" r="4.5"/>
+<circle class="meas" cx="854.9" cy="177.8" r="4.5"/>
+<circle class="meas" cx="878.0" cy="120.8" r="4.5"/>
+<text x="675.0" y="422" text-anchor="middle" font-size="13">carrier frequency (kHz)</text>
+<text x="466.0" y="50.0" font-size="12">el. bias (deg)</text>
+<text x="768.0" y="60.0" font-size="12" fill="#1f78b4">dots: measured</text>
+<text x="768.0" y="78.0" font-size="12" fill="#d94801">line: two-ray fit</text>
+</svg>
