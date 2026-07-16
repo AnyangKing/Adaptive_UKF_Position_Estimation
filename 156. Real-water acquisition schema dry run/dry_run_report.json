@@ -1,0 +1,26 @@
+{
+  "schema": "real-water-block-log-validation-1",
+  "input": "mock_field_log.csv",
+  "row_count": 4,
+  "session_count": 1,
+  "record_status_counts": {
+    "mock": 4
+  },
+  "mode_counts": {
+    "fixed": 2,
+    "hop": 2
+  },
+  "tier_counts": {
+    "T1": 4
+  },
+  "session_mode_patterns": {
+    "DRYRUN_T1_001": [
+      "fixed",
+      "hop",
+      "hop",
+      "fixed"
+    ]
+  },
+  "error_count": 0,
+  "errors": []
+}
