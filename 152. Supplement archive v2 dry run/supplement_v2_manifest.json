@@ -1,0 +1,651 @@
+{
+  "schema": "supplement-v2-dry-run-1",
+  "policy": {
+    "copies_raw_files": false,
+    "creates_zip": false,
+    "includes_manuscript_source": false,
+    "includes_manuscript_pdf": false,
+    "figures_from_local_paper_allowed": true
+  },
+  "artifact_count": 90,
+  "total_bytes": 2330009,
+  "category_counts": {
+    "code": 65,
+    "data": 8,
+    "document": 5,
+    "figure": 8,
+    "figure_script": 4
+  },
+  "entries": [
+    {
+      "category": "code",
+      "archive_path": "code/145_two_ray_closure/README.md",
+      "source_path": "145. Two-ray mechanism evidence closure/README.md",
+      "bytes": 1763,
+      "sha256": "E3A5B65DBCA35972C0A827579B5E706B4E2386DD2EC0351EED7DE0736CF1CB95"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/145_two_ray_closure/reproduce_tworay_fit.py",
+      "source_path": "145. Two-ray mechanism evidence closure/reproduce_tworay_fit.py",
+      "bytes": 7815,
+      "sha256": "4E6C694CED8775D9A54BB357DAC6A5921D64BF66268EBAF5D8E124D1F88F0C1A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/145_two_ray_closure/result_summary.md",
+      "source_path": "145. Two-ray mechanism evidence closure/result_summary.md",
+      "bytes": 2228,
+      "sha256": "4208080A306291EEC2AB64063A5BB45A3B4A9B3914BD1451DB384950C2072090"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/145_two_ray_closure/test_diagnostic.py",
+      "source_path": "145. Two-ray mechanism evidence closure/test_diagnostic.py",
+      "bytes": 936,
+      "sha256": "C9ADDC702172BEA7D9E46AA93D557342F3ABF0AB539D85E89B4ED3F43DB8DA06"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/README.md",
+      "source_path": "45. CRLB 이론하한 대비 효율/README.md",
+      "bytes": 3998,
+      "sha256": "427D0B58C7E47B0489DD2FB178D5EBDEFF603E54693811861E22CA5BECC2BA6C"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/channel.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/channel.py",
+      "bytes": 4898,
+      "sha256": "4FED7EB68A7583CE921E921D5C8DDE9CF788943AA0480F07F18E164BAB8F882A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/conditional_adaptive.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/conditional_adaptive.py",
+      "bytes": 1232,
+      "sha256": "E6BEF0123D22B8C459759ED3B45C772D3B7206FB438877232EF0BB4D67E504E3"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/config.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/config.py",
+      "bytes": 1145,
+      "sha256": "61071E088683BCBC220D9BAC53CBE114EE98432136896BCA6CCF5E22AC73A471"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/consistency.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/consistency.py",
+      "bytes": 1245,
+      "sha256": "18B81BEF1E7B1E2D2F3BC76EF4602114E66E3DD422086B9F52EE3185B15C62F7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/crlb.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/crlb.py",
+      "bytes": 1238,
+      "sha256": "A23A7E4481C24F20CABD7AA009A92F8060DA5D1D8F93CB07A3B442088F9A0908"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/ekf.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/ekf.py",
+      "bytes": 2492,
+      "sha256": "7E5BE84CB6B0B0F57178C9CC5C7DF45F26ECD248DE9925CF1454F8A1B5D981AC"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/estimators.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/estimators.py",
+      "bytes": 9919,
+      "sha256": "43BDFB6DA91B247581403F951ED8577CF2D5EAF936D60C2968CC03EB83F4E6D5"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/measurement.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/measurement.py",
+      "bytes": 3454,
+      "sha256": "78EF18FF0AE4DD656634CF209E2ABFEF22CE6C5C94F09012666C7D35AF015519"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/nls.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/nls.py",
+      "bytes": 1497,
+      "sha256": "CF1F57BDF7201FA3CA4B7EAECEC92A7C0443B5DDFAA48B63A418EBE9B3B568A7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/peak_measurement.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/peak_measurement.py",
+      "bytes": 2606,
+      "sha256": "3477942810FB5BD0783320D3FAC32B0BF487E973527D069FE35C05ABCC380E0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/run_crlb.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/run_crlb.py",
+      "bytes": 5575,
+      "sha256": "4C575CC86B43C6D8CBD15941ABD3332BC4ACBB3BD7FAF2BEFBD844D3D5C0235F"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/test_diagnostic.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/test_diagnostic.py",
+      "bytes": 1364,
+      "sha256": "6E41E69F8237F89F40191294449F59C68D10DA001C799F5D6AB79D6B7E33A97A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/trajectory.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/trajectory.py",
+      "bytes": 3146,
+      "sha256": "54965E5697B72BC4367D638A2CC37821D6E903A0175045947827BCA5F6C1EA87"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/45_crlb_floor/ukf.py",
+      "source_path": "45. CRLB 이론하한 대비 효율/ukf.py",
+      "bytes": 4154,
+      "sha256": "959A8EB621B0DFA9BABA12F7D2DEE01A8CF6812F0234C8AB324E923AFF44BAD6"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/README.md",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/README.md",
+      "bytes": 4243,
+      "sha256": "9D8F5BD9B9F41265125A09B3F36306120EA17C27692A49EC68BD0C2B707CD435"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/channel.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/channel.py",
+      "bytes": 5884,
+      "sha256": "9BC70E0CBEC224A5FDA57A903232CA69B5BD721F73ADBCEFFC4994B0C239FC32"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/config.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/config.py",
+      "bytes": 1437,
+      "sha256": "A7F6C7B735E9FFDB3AD4DFF8E747914A3E60E3AB3A0028E70ADA6E58D223403B"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/estimators.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/estimators.py",
+      "bytes": 9919,
+      "sha256": "43BDFB6DA91B247581403F951ED8577CF2D5EAF936D60C2968CC03EB83F4E6D5"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/measurement.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/measurement.py",
+      "bytes": 3454,
+      "sha256": "78EF18FF0AE4DD656634CF209E2ABFEF22CE6C5C94F09012666C7D35AF015519"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/peak_measurement.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/peak_measurement.py",
+      "bytes": 2606,
+      "sha256": "3477942810FB5BD0783320D3FAC32B0BF487E973527D069FE35C05ABCC380E0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/run_agility.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/run_agility.py",
+      "bytes": 6177,
+      "sha256": "5EB47F910CE2D984C4017962DCF33311C361AC3DBD0F1F603964DBFA1C0983A2"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/test_diagnostic.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/test_diagnostic.py",
+      "bytes": 1868,
+      "sha256": "C1FE3F18A601D1F0466077E7BF4F35A8B0AA0E133C0670B8434CF814067D3DDD"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/58_carrier_sensitivity/ukf.py",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/ukf.py",
+      "bytes": 4154,
+      "sha256": "959A8EB621B0DFA9BABA12F7D2DEE01A8CF6812F0234C8AB324E923AFF44BAD6"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/README.md",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/README.md",
+      "bytes": 3753,
+      "sha256": "73D706BBE5313A05AC1733279B8DABEA800952E7236CD42DB21171C82616F4D3"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/channel.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/channel.py",
+      "bytes": 4898,
+      "sha256": "4FED7EB68A7583CE921E921D5C8DDE9CF788943AA0480F07F18E164BAB8F882A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/conditional_adaptive.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/conditional_adaptive.py",
+      "bytes": 1375,
+      "sha256": "2EDAC708791550D93C9AD6B84BB5A69AB26BB575BA11FBB9A3470BD17C1EAB0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/config.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/config.py",
+      "bytes": 1145,
+      "sha256": "61071E088683BCBC220D9BAC53CBE114EE98432136896BCA6CCF5E22AC73A471"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/consistency.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/consistency.py",
+      "bytes": 1245,
+      "sha256": "18B81BEF1E7B1E2D2F3BC76EF4602114E66E3DD422086B9F52EE3185B15C62F7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/estimators.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/estimators.py",
+      "bytes": 9919,
+      "sha256": "43BDFB6DA91B247581403F951ED8577CF2D5EAF936D60C2968CC03EB83F4E6D5"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/measurement.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/measurement.py",
+      "bytes": 3454,
+      "sha256": "78EF18FF0AE4DD656634CF209E2ABFEF22CE6C5C94F09012666C7D35AF015519"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/peak_measurement.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/peak_measurement.py",
+      "bytes": 2606,
+      "sha256": "3477942810FB5BD0783320D3FAC32B0BF487E973527D069FE35C05ABCC380E0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/run_static_hop.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/run_static_hop.py",
+      "bytes": 6347,
+      "sha256": "C92B70E9A004F7C50BDFED5A7C5E9948C9DBC33009D1F8EFACCE50F9245FA800"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/test_diagnostic.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/test_diagnostic.py",
+      "bytes": 1405,
+      "sha256": "EE2C79D7AAA132C9EC361EBBA079ABE96D813730D1CEBEA3C737CE784DF6623C"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/61_static_validation/ukf.py",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/ukf.py",
+      "bytes": 4154,
+      "sha256": "959A8EB621B0DFA9BABA12F7D2DEE01A8CF6812F0234C8AB324E923AFF44BAD6"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/README.md",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/README.md",
+      "bytes": 5308,
+      "sha256": "60B5665E13EBFCA308FE9AF31C6A0E0F49048423BDFF9D24BA59FEFD533D1325"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/channel.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/channel.py",
+      "bytes": 4898,
+      "sha256": "4FED7EB68A7583CE921E921D5C8DDE9CF788943AA0480F07F18E164BAB8F882A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/conditional_adaptive.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/conditional_adaptive.py",
+      "bytes": 1375,
+      "sha256": "2EDAC708791550D93C9AD6B84BB5A69AB26BB575BA11FBB9A3470BD17C1EAB0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/config.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/config.py",
+      "bytes": 1145,
+      "sha256": "61071E088683BCBC220D9BAC53CBE114EE98432136896BCA6CCF5E22AC73A471"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/consistency.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/consistency.py",
+      "bytes": 1245,
+      "sha256": "18B81BEF1E7B1E2D2F3BC76EF4602114E66E3DD422086B9F52EE3185B15C62F7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/estimators.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/estimators.py",
+      "bytes": 9919,
+      "sha256": "43BDFB6DA91B247581403F951ED8577CF2D5EAF936D60C2968CC03EB83F4E6D5"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/measurement.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/measurement.py",
+      "bytes": 3454,
+      "sha256": "78EF18FF0AE4DD656634CF209E2ABFEF22CE6C5C94F09012666C7D35AF015519"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/peak_measurement.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/peak_measurement.py",
+      "bytes": 2606,
+      "sha256": "3477942810FB5BD0783320D3FAC32B0BF487E973527D069FE35C05ABCC380E0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/run_moving_validation.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/run_moving_validation.py",
+      "bytes": 8674,
+      "sha256": "AD02AF78865FF8725623A20CA05D2E2C63ADF402BA5532B4C964095DF1919334"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/test_diagnostic.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/test_diagnostic.py",
+      "bytes": 2186,
+      "sha256": "9405D88F79DCCD9C7689C3C0F58BE358441C542780464E5DB243739E6B9F10B3"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/63_moving_boundary/ukf.py",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/ukf.py",
+      "bytes": 4154,
+      "sha256": "959A8EB621B0DFA9BABA12F7D2DEE01A8CF6812F0234C8AB324E923AFF44BAD6"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/README.md",
+      "source_path": "82. 준정지 속도 경계 검증 실행/README.md",
+      "bytes": 4227,
+      "sha256": "81A7F301A4A8B00EECEC80439EB59ACB4A5AFD76AFB113699CAFD3F7022B621F"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/channel.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/channel.py",
+      "bytes": 4898,
+      "sha256": "4FED7EB68A7583CE921E921D5C8DDE9CF788943AA0480F07F18E164BAB8F882A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/conditional_adaptive.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/conditional_adaptive.py",
+      "bytes": 1375,
+      "sha256": "2EDAC708791550D93C9AD6B84BB5A69AB26BB575BA11FBB9A3470BD17C1EAB0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/config.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/config.py",
+      "bytes": 1145,
+      "sha256": "61071E088683BCBC220D9BAC53CBE114EE98432136896BCA6CCF5E22AC73A471"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/consistency.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/consistency.py",
+      "bytes": 1245,
+      "sha256": "18B81BEF1E7B1E2D2F3BC76EF4602114E66E3DD422086B9F52EE3185B15C62F7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/estimators.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/estimators.py",
+      "bytes": 9919,
+      "sha256": "43BDFB6DA91B247581403F951ED8577CF2D5EAF936D60C2968CC03EB83F4E6D5"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/measurement.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/measurement.py",
+      "bytes": 3454,
+      "sha256": "78EF18FF0AE4DD656634CF209E2ABFEF22CE6C5C94F09012666C7D35AF015519"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/peak_measurement.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/peak_measurement.py",
+      "bytes": 2606,
+      "sha256": "3477942810FB5BD0783320D3FAC32B0BF487E973527D069FE35C05ABCC380E0A"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/result_summary.md",
+      "source_path": "82. 준정지 속도 경계 검증 실행/result_summary.md",
+      "bytes": 3847,
+      "sha256": "951E890D6E8D76581440C143EA9C69105313605D22C5311E9B2704CBE01D5C5C"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/run_quasi_static_boundary.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/run_quasi_static_boundary.py",
+      "bytes": 17327,
+      "sha256": "AFB84B90A7985C02CAD754CE83707B0FA5B316409B742036FFA169BB1B8A95A7"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/test_diagnostic.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/test_diagnostic.py",
+      "bytes": 3149,
+      "sha256": "AEE9DC2667D2119B4B6B8A2E05B8F7B5A7674087CD21C3D5E894666E77980F3D"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/82_quasi_static_boundary/ukf.py",
+      "source_path": "82. 준정지 속도 경계 검증 실행/ukf.py",
+      "bytes": 4154,
+      "sha256": "959A8EB621B0DFA9BABA12F7D2DEE01A8CF6812F0234C8AB324E923AFF44BAD6"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/93_method_audit/README.md",
+      "source_path": "93. Method 세부 코드 대조/README.md",
+      "bytes": 2562,
+      "sha256": "F69F9AE58F907283EF5D271B5A486B0EB0A7D8F2648E0B66ADFAB833FE395E4E"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/93_method_audit/extract_method_facts.py",
+      "source_path": "93. Method 세부 코드 대조/extract_method_facts.py",
+      "bytes": 6656,
+      "sha256": "636FB24366906B020D9BFF784C38FFF230E10C29B908CD600E454E328975C3FA"
+    },
+    {
+      "category": "code",
+      "archive_path": "code/93_method_audit/test_diagnostic.py",
+      "source_path": "93. Method 세부 코드 대조/test_diagnostic.py",
+      "bytes": 1652,
+      "sha256": "1FBDD059C0CB8CAE3ED8A1B20F50EC678EB252F0FF098A76B574021A317EDC8A"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/agility.json",
+      "source_path": "58. 반송파 미세도약 코히어런트 편향 진단/results/agility.json",
+      "bytes": 25317,
+      "sha256": "6ECD4375FF29165EE2A2B13D51B7FA64BBC3E82933D4FF3BC7B5B79042FF0D3B"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/crlb.json",
+      "source_path": "45. CRLB 이론하한 대비 효율/results/crlb.json",
+      "bytes": 15318,
+      "sha256": "E0390800601613B4274F5EC36A6B38EAA90CC9E290BE84DB9E2C8FCCB11BFCD7"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/method_facts.json",
+      "source_path": "93. Method 세부 코드 대조/results/method_facts.json",
+      "bytes": 2180,
+      "sha256": "9D8BCB9C5F45C82C0440DCFFD205B71F03FADDC792FED59B9F8F0B2B7BD3A250"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/moving_validation.json",
+      "source_path": "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json",
+      "bytes": 19714,
+      "sha256": "2CC68FF4A5E0F1237216345B340442525CB28D9E85A11A1B6E8F45C85A27002D"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/quasi_static_boundary.json",
+      "source_path": "82. 준정지 속도 경계 검증 실행/results/quasi_static_boundary.json",
+      "bytes": 86775,
+      "sha256": "4D15F10F0F1743F27A29A392A73512958FC9ADD31270995F4B552A5E47EBB06B"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/quasi_static_trials.csv",
+      "source_path": "82. 준정지 속도 경계 검증 실행/results/quasi_static_trials.csv",
+      "bytes": 25109,
+      "sha256": "74A2E908E8CCCCE2A49B76ADFCA05D6308035110334536EC382D73BEE05ED4E2"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/static_hop_validation.json",
+      "source_path": "61. 정지표적 도약 대규모 독립검증/results/static_hop_validation.json",
+      "bytes": 23910,
+      "sha256": "7D85E90F406CB082D7F40E53E806DE1AFC647289B48D0B63AC2BD55CD7A5E8D1"
+    },
+    {
+      "category": "data",
+      "archive_path": "data/two_ray_fit.json",
+      "source_path": "145. Two-ray mechanism evidence closure/results/two_ray_fit.json",
+      "bytes": 5820,
+      "sha256": "47087B3B1A67FEB2EEEE74A6C087AA35EED1A6C34CEA1410DE951788D950BB7C"
+    },
+    {
+      "category": "document",
+      "archive_path": "docs/claim_to_artifact_matrix.md",
+      "source_path": "144. Manuscript claim traceability audit/claim_traceability_matrix.md",
+      "bytes": 5670,
+      "sha256": "23DAF65F836C030A020E1BB3E6DC19B7B59A332C63CC2002F9C99D50433DAD07"
+    },
+    {
+      "category": "document",
+      "archive_path": "docs/current_submission_state.md",
+      "source_path": "149. Manifest correction and supplement closeout/current_submission_state.md",
+      "bytes": 1408,
+      "sha256": "1F44A3538E180F17D5D2D0D0416624DC6A0BD231954204A2E6A67A60230FC9C0"
+    },
+    {
+      "category": "document",
+      "archive_path": "docs/figure_source_manifest.md",
+      "source_path": "146. Figure and table source-data manifest refresh/figure_source_manifest.md",
+      "bytes": 4815,
+      "sha256": "24BE327355C9EE6FC055CF2FB1F60C42B314183FC94237F937A2B9D5E174F17A"
+    },
+    {
+      "category": "document",
+      "archive_path": "docs/submission_package_policy.md",
+      "source_path": "146. Figure and table source-data manifest refresh/submission_package_policy.md",
+      "bytes": 1313,
+      "sha256": "C2F08AFD07048B9C430BF0211B6E9FCCCDF8BEEC441CA123BDD4C46D658F47E3"
+    },
+    {
+      "category": "document",
+      "archive_path": "docs/table_source_manifest.md",
+      "source_path": "146. Figure and table source-data manifest refresh/table_source_manifest.md",
+      "bytes": 2841,
+      "sha256": "EA866101DECF1E3A3C608394CE5DF71FAC63CE8503220B17DFC5F286B59E7238"
+    },
+    {
+      "category": "figure_script",
+      "archive_path": "figure_scripts/generate_core_figures.py",
+      "source_path": "70. 논문 그림 1차 생성/generate_core_figures.py",
+      "bytes": 9684,
+      "sha256": "81862384AFA33737869B8CC722488B1EB95897D63AF96293B3FC1A84D84BE212"
+    },
+    {
+      "category": "figure_script",
+      "archive_path": "figure_scripts/generate_fig5_png.py",
+      "source_path": "95. Fig5 PNG and submission packaging/generate_fig5_png.py",
+      "bytes": 2722,
+      "sha256": "35DB8A798A844CC912E6B058B284F08DE5ADF784E7A257A388DCDE5E151CB877"
+    },
+    {
+      "category": "figure_script",
+      "archive_path": "figure_scripts/make_fig1_polished.py",
+      "source_path": "101. Fig1 visual polish/make_fig1_polished.py",
+      "bytes": 7962,
+      "sha256": "A4987DCDB300BC2980BF3B424772C06AB050C99BD670CA7F7CB53B5DABE706FD"
+    },
+    {
+      "category": "figure_script",
+      "archive_path": "figure_scripts/reproduce_tworay_fit.py",
+      "source_path": "145. Two-ray mechanism evidence closure/reproduce_tworay_fit.py",
+      "bytes": 7815,
+      "sha256": "4E6C694CED8775D9A54BB357DAC6A5921D64BF66268EBAF5D8E124D1F88F0C1A"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig1_system_concept.png",
+      "source_path": "paper/figures/fig1_system_concept.png",
+      "bytes": 477109,
+      "sha256": "8D05016288D2C5D08F81E3CB4DD5219083FD473A09DD617D88E6EE1BFAE05732"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig2_frequency_agile_bias.png",
+      "source_path": "paper/figures/fig2_frequency_agile_bias.png",
+      "bytes": 95294,
+      "sha256": "CEC40564C317612BF093BD3017CA270626E350A4360218E7A50736C650FBAAB2"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig3_static_600m_paired_rmse.png",
+      "source_path": "paper/figures/fig3_static_600m_paired_rmse.png",
+      "bytes": 261909,
+      "sha256": "11467A68D1413326A1A2DEE4EDE26FA232CED6FC1B81FEE1B8843D712FAA7D28"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig4_moving_whitening_lag1.png",
+      "source_path": "paper/figures/fig4_moving_whitening_lag1.png",
+      "bytes": 494597,
+      "sha256": "30E3AE03C8CC379896FDD70B987E4862023B158D3DE2A81BB576B1A89FB7BEE8"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig5_quasi_static_speed_boundary.png",
+      "source_path": "paper/figures/fig5_quasi_static_speed_boundary.png",
+      "bytes": 179563,
+      "sha256": "99231CED6F162996428EE1B3E66D2357E83168802D59243D3E8E59624097368C"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig6_crlb_floor.png",
+      "source_path": "paper/figures/fig6_crlb_floor.png",
+      "bytes": 155194,
+      "sha256": "8E032ADD037FEDE683AA2CFE5A250716FCA962CEB6F540705DABCA00DA2CFABB"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/fig_tworay_fit.png",
+      "source_path": "paper/figures/fig_tworay_fit.png",
+      "bytes": 159608,
+      "sha256": "DE3D71050CA6BF86024604F3F1DC66D259E65B9D6257158076D6D8CE7E4E7C8C"
+    },
+    {
+      "category": "figure",
+      "archive_path": "figures/two_ray_fit.svg",
+      "source_path": "145. Two-ray mechanism evidence closure/results/two_ray_fit.svg",
+      "bytes": 4434,
+      "sha256": "03AE73C7CF83F3E1A64852FA410C0ECDF0DC7BDB07651DF1FF6CAA81AAB450E1"
+    }
+  ]
+}
