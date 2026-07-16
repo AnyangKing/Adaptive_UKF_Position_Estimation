@@ -1,0 +1,133 @@
+{
+  "schema": "reviewer-challenge-matrix-1",
+  "counts": {
+    "closed_with_current_evidence": 6,
+    "partial_future_ablation": 1,
+    "open_requires_field_validation": 2,
+    "open_requires_human_policy": 1
+  },
+  "challenges": [
+    {
+      "id": "R1",
+      "topic": "Frequency agility is established prior art",
+      "status": "closed_with_current_evidence",
+      "safe_position": "Frequency hopping itself is not claimed as novel. The contribution is carrier-agile whitening of post-gating coherent multipath DOA bias in compact shallow-water USBL, with mechanism and operating-boundary validation.",
+      "evidence": [
+        "68. 레이더 glint 선행연구 포지셔닝",
+        "117. Related work table finalization/final_related_work_table.md",
+        "144. Manuscript claim traceability audit/reviewer_response_ready_claims.md"
+      ],
+      "must_not_claim": "First use of frequency hopping to reduce glint-like error."
+    },
+    {
+      "id": "R2",
+      "topic": "The study is simulation-only",
+      "status": "open_requires_field_validation",
+      "safe_position": "The manuscript provides simulation and signal-level evidence; tank, lake, or sea validation remains required for field-performance claims.",
+      "evidence": [
+        "118. Real-water validation plan/experiment_protocol.md",
+        "118. Real-water validation plan/success_criteria.md",
+        "144. Manuscript claim traceability audit/weak_points.md"
+      ],
+      "must_not_claim": "Field-proven or deployment-ready performance."
+    },
+    {
+      "id": "R3",
+      "topic": "Moving-target RMSE does not improve",
+      "status": "closed_with_current_evidence",
+      "safe_position": "Carrier agility significantly whitens moving-target elevation residuals, but the present always-on schedule does not yield a statistically reliable pooled moving-target RMSE gain.",
+      "evidence": [
+        "63. 이동표적 도약 대규모검증 백색화 확인/README.md",
+        "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json",
+        "144. Manuscript claim traceability audit/reviewer_response_ready_claims.md"
+      ],
+      "must_not_claim": "General moving-target RMSE improvement."
+    },
+    {
+      "id": "R4",
+      "topic": "The 30-34 kHz schedule appears arbitrary",
+      "status": "partial_future_ablation",
+      "safe_position": "The frozen schedule is a mechanism-validation schedule supported by carrier sensitivity and independent static validation; it is not claimed to be optimal.",
+      "evidence": [
+        "58. 반송파 미세도약 코히어런트 편향 진단/README.md",
+        "61. 정지표적 도약 대규모 독립검증/README.md",
+        "119. Carrier schedule ablation plan/ablation_protocol.md"
+      ],
+      "must_not_claim": "The linear 20-carrier schedule is optimal."
+    },
+    {
+      "id": "R5",
+      "topic": "The two-ray fit may be selected or overfit",
+      "status": "closed_with_current_evidence",
+      "safe_position": "The oscillation period is fixed from independent image-source geometry, while only offset, sine, and cosine coefficients are fitted. The displayed 400 m and 600 m cases satisfy the carrier-grid resolution condition.",
+      "evidence": [
+        "138. 이론-실측 오버레이 그림/README.md",
+        "138. 이론-실측 오버레이 그림/generate_tworay_fit_figure.py",
+        "145. Two-ray mechanism evidence closure/results/two_ray_fit.json",
+        "153. Figure source lineage closure/figure_lineage_report.json"
+      ],
+      "must_not_claim": "The representative fit proves all geometries follow an exact two-ray model."
+    },
+    {
+      "id": "R6",
+      "topic": "Why not solve the error with a better Kalman filter",
+      "status": "closed_with_current_evidence",
+      "safe_position": "Estimator comparisons and the empirical CRLB-scale analysis show that long-range error is dominated by compact-aperture measurement bias and a residual systematic floor, not only filter suboptimality.",
+      "evidence": [
+        "43. 추정기 비교 골격 EKF UKF NLS/README.md",
+        "45. CRLB 이론하한 대비 효율/README.md",
+        "45. CRLB 이론하한 대비 효율/results/crlb.json"
+      ],
+      "must_not_claim": "A filter-only change can deliver sub-meter accuracy at 600 m."
+    },
+    {
+      "id": "R7",
+      "topic": "Statistical validation and independent seeds",
+      "status": "closed_with_current_evidence",
+      "safe_position": "The static headline uses paired independent-seed validation, while moving and quasi-static conclusions preserve negative and non-monotonic results instead of selecting favorable cases.",
+      "evidence": [
+        "61. 정지표적 도약 대규모 독립검증/results/static_hop_validation.json",
+        "63. 이동표적 도약 대규모검증 백색화 확인/results/moving_validation.json",
+        "82. 준정지 속도 경계 검증 실행/results/quasi_static_boundary.json"
+      ],
+      "must_not_claim": "All operating conditions improve significantly."
+    },
+    {
+      "id": "R8",
+      "topic": "Estimator and adaptive-R comparison fairness",
+      "status": "closed_with_current_evidence",
+      "safe_position": "The manuscript distinguishes NLS, EKF, UKF, routed UKF, and measurement-floor analyses and audits the adopted adaptive-R implementation against committed code and result JSON.",
+      "evidence": [
+        "43. 추정기 비교 골격 EKF UKF NLS/README.md",
+        "44. 조건부 adaptive-R 라우팅 ablation/README.md",
+        "93. Method 세부 코드 대조/README.md",
+        "93. Method 세부 코드 대조/results/method_facts.json"
+      ],
+      "must_not_claim": "Every gain is caused by the UKF architecture itself."
+    },
+    {
+      "id": "R9",
+      "topic": "Transducer response, calibration, sound speed, and field hardware",
+      "status": "open_requires_field_validation",
+      "safe_position": "The simulation includes sound-speed and synchronization sensitivity studies, but deployment requires frequency-dependent transducer/array calibration and measured environmental characterization.",
+      "evidence": [
+        "48. 음속 시각동기 오차 강건성/README.md",
+        "118. Real-water validation plan/risk_and_fallback.md",
+        "118. Real-water validation plan/measurement_log_template.md"
+      ],
+      "must_not_claim": "Guaranteed robustness to real transducer and environmental mismatch."
+    },
+    {
+      "id": "R10",
+      "topic": "Data and code availability",
+      "status": "open_requires_human_policy",
+      "safe_position": "A content-addressed supplement manifest, exact figure lineage, and executable smoke matrix are ready; the public repository, DOI, and release scope remain author decisions.",
+      "evidence": [
+        "152. Supplement archive v2 dry run/supplement_v2_manifest.json",
+        "153. Figure source lineage closure/figure_lineage_report.json",
+        "154. Supplement code smoke matrix/smoke_matrix_report.json"
+      ],
+      "must_not_claim": "A public DOI or unrestricted data release already exists."
+    }
+  ]
+}
