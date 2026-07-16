@@ -1,0 +1,34 @@
+{
+  "schema": "real-water-paired-analysis-dry-run-1",
+  "input": "mock_field_log.csv",
+  "record_statuses": [
+    "mock"
+  ],
+  "is_research_evidence": false,
+  "disclaimer": "Mock outputs validate software flow only and must not be cited as experimental evidence.",
+  "session_count": 1,
+  "sessions": [
+    {
+      "session_id": "DRYRUN_T1_001",
+      "record_statuses": [
+        "mock"
+      ],
+      "tier": "T1",
+      "included_fixed_blocks": 2,
+      "included_hop_blocks": 2,
+      "fixed_rmse_mean_m": 5.15,
+      "hop_rmse_mean_m": 4.55,
+      "rmse_gain_m": 0.6000000000000005,
+      "rmse_reduction_pct": 11.650485436893215,
+      "fixed_p90_mean_m": 6.85,
+      "hop_p90_mean_m": 6.25,
+      "p90_hop_minus_fixed_m": -0.5999999999999996,
+      "fixed_lag1_mean": 0.435,
+      "hop_lag1_mean": 0.065,
+      "lag1_reduction": 0.37,
+      "fixed_gross_error_mean": 1.0,
+      "hop_gross_error_mean": 1.0,
+      "decision": "DRY_RUN_ONLY_NOT_EVIDENCE"
+    }
+  ]
+}
