@@ -1,0 +1,469 @@
+{
+  "audit_type": "runtime_split_only_no_algorithm_change",
+  "source_pipeline_folder": "61. 정지표적 도약 대규모 독립검증",
+  "git_head": "b5acd2c6f736",
+  "platform": {
+    "python": "3.12.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  },
+  "scenario": {
+    "scenarios": [
+      {
+        "distance_m": 100.0,
+        "azimuth_deg": -35.0,
+        "depth_m": 20.0,
+        "snr_db": 20.0
+      },
+      {
+        "distance_m": 200.0,
+        "azimuth_deg": 40.0,
+        "depth_m": 35.0,
+        "snr_db": 20.0
+      },
+      {
+        "distance_m": 400.0,
+        "azimuth_deg": 115.0,
+        "depth_m": 55.0,
+        "snr_db": 20.0
+      },
+      {
+        "distance_m": 600.0,
+        "azimuth_deg": -150.0,
+        "depth_m": 70.0,
+        "snr_db": 20.0
+      }
+    ],
+    "pings_per_scenario": 5,
+    "seed_root": 1770000,
+    "routing_threshold_deg": 5.0,
+    "canonical_channel": {
+      "sample_rate_hz": 192000.0,
+      "carrier_hz": 32000.0,
+      "chirp_bandwidth_hz": 12000.0,
+      "pulse_duration_s": 0.01,
+      "guard_time_s": 0.015
+    }
+  },
+  "summary": {
+    "signal_synthesis_ms": {
+      "n": 20,
+      "mean_ms": 37.11678999752621,
+      "median_ms": 38.06474999873899,
+      "min_ms": 23.75620001112111,
+      "max_ms": 48.54689999774564,
+      "p90_ms": 47.102849996008445
+    },
+    "measurement_extraction_ms": {
+      "n": 20,
+      "mean_ms": 213.59445999987656,
+      "median_ms": 206.58689999982016,
+      "min_ms": 79.02140000078361,
+      "max_ms": 366.02790000324603,
+      "p90_ms": 356.7983799992362
+    },
+    "ukf_update_ms_excluding_initialization": {
+      "n": 16,
+      "mean_ms": 1.5249250000124448,
+      "median_ms": 1.4164000021992251,
+      "min_ms": 1.2922000023536384,
+      "max_ms": 2.8835999983130023,
+      "p90_ms": 1.6152499956660904
+    },
+    "online_excluding_signal_synthesis_ms": {
+      "n": 20,
+      "mean_ms": 214.81439999988652,
+      "median_ms": 208.0335999999079,
+      "min_ms": 80.38349999696948,
+      "max_ms": 367.44120001094416,
+      "p90_ms": 358.184549996804
+    }
+  },
+  "rows": [
+    {
+      "scenario_index": 0,
+      "ping": 0,
+      "distance_m": 100.0,
+      "initialized_from_first_ping": true,
+      "signal_synthesis_ms": 34.17590000026394,
+      "measurement_extraction_ms": 86.05790000001434,
+      "ukf_update_ms": 0.0,
+      "online_excluding_synthesis_ms": 86.05790000001434,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 0,
+      "ping": 1,
+      "distance_m": 100.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 32.20089999376796,
+      "measurement_extraction_ms": 80.88219999626745,
+      "ukf_update_ms": 2.8835999983130023,
+      "online_excluding_synthesis_ms": 83.76579999458045,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 0,
+      "ping": 2,
+      "distance_m": 100.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 32.712200001697056,
+      "measurement_extraction_ms": 79.02140000078361,
+      "ukf_update_ms": 1.3620999961858615,
+      "online_excluding_synthesis_ms": 80.38349999696948,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 0,
+      "ping": 3,
+      "distance_m": 100.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 31.597900000633672,
+      "measurement_extraction_ms": 81.21469999605324,
+      "ukf_update_ms": 1.5347000007750466,
+      "online_excluding_synthesis_ms": 82.74939999682829,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 0,
+      "ping": 4,
+      "distance_m": 100.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 32.18969999579713,
+      "measurement_extraction_ms": 80.17260000633541,
+      "ukf_update_ms": 1.3982999953441322,
+      "online_excluding_synthesis_ms": 81.57090000167955,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 1,
+      "ping": 0,
+      "distance_m": 200.0,
+      "initialized_from_first_ping": true,
+      "signal_synthesis_ms": 43.4294000006048,
+      "measurement_extraction_ms": 213.09499999915715,
+      "ukf_update_ms": 0.0,
+      "online_excluding_synthesis_ms": 213.09499999915715,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 1,
+      "ping": 1,
+      "distance_m": 200.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 44.37869999674149,
+      "measurement_extraction_ms": 216.80050001305062,
+      "ukf_update_ms": 1.4759000041522086,
+      "online_excluding_synthesis_ms": 218.27640001720283,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 1,
+      "ping": 2,
+      "distance_m": 200.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 48.538799994275905,
+      "measurement_extraction_ms": 206.2484000052791,
+      "ukf_update_ms": 1.4194999967003241,
+      "online_excluding_synthesis_ms": 207.66790000197943,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 1,
+      "ping": 3,
+      "distance_m": 200.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 46.94329999620095,
+      "measurement_extraction_ms": 200.06109999667387,
+      "ukf_update_ms": 1.4093000063439831,
+      "online_excluding_synthesis_ms": 201.47040000301786,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 1,
+      "ping": 4,
+      "distance_m": 200.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 41.95359999721404,
+      "measurement_extraction_ms": 206.43310000014026,
+      "ukf_update_ms": 1.3838000013493001,
+      "online_excluding_synthesis_ms": 207.81690000148956,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "ping": 0,
+      "distance_m": 400.0,
+      "initialized_from_first_ping": true,
+      "signal_synthesis_ms": 26.59459999995306,
+      "measurement_extraction_ms": 212.55090000340715,
+      "ukf_update_ms": 0.0,
+      "online_excluding_synthesis_ms": 212.55090000340715,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "ping": 1,
+      "distance_m": 400.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 23.75620001112111,
+      "measurement_extraction_ms": 206.74069999950007,
+      "ukf_update_ms": 1.4433000033022836,
+      "online_excluding_synthesis_ms": 208.18400000280235,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "ping": 2,
+      "distance_m": 400.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 26.93949999229517,
+      "measurement_extraction_ms": 212.56079999147914,
+      "ukf_update_ms": 1.3114000030327588,
+      "online_excluding_synthesis_ms": 213.8721999945119,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "ping": 3,
+      "distance_m": 400.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 24.25519999815151,
+      "measurement_extraction_ms": 203.21699998748954,
+      "ukf_update_ms": 1.2922000023536384,
+      "online_excluding_synthesis_ms": 204.50919998984318,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "ping": 4,
+      "distance_m": 400.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 24.13769999111537,
+      "measurement_extraction_ms": 206.22560000629164,
+      "ukf_update_ms": 1.657599990721792,
+      "online_excluding_synthesis_ms": 207.88319999701343,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "ping": 0,
+      "distance_m": 600.0,
+      "initialized_from_first_ping": true,
+      "signal_synthesis_ms": 45.71959999157116,
+      "measurement_extraction_ms": 346.9641999981832,
+      "ukf_update_ms": 0.0,
+      "online_excluding_synthesis_ms": 346.9641999981832,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "ping": 1,
+      "distance_m": 600.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 44.727500004228204,
+      "measurement_extraction_ms": 356.5789999993285,
+      "ukf_update_ms": 1.377599997795187,
+      "online_excluding_synthesis_ms": 357.9565999971237,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "ping": 2,
+      "distance_m": 600.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 45.30109999177512,
+      "measurement_extraction_ms": 352.2633999964455,
+      "ukf_update_ms": 1.5729000006103888,
+      "online_excluding_synthesis_ms": 353.8362999970559,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "ping": 3,
+      "distance_m": 600.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 48.54689999774564,
+      "measurement_extraction_ms": 358.7727999984054,
+      "ukf_update_ms": 1.4632999955210835,
+      "online_excluding_synthesis_ms": 360.2360999939265,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "ping": 4,
+      "distance_m": 600.0,
+      "initialized_from_first_ping": false,
+      "signal_synthesis_ms": 44.237099995370954,
+      "measurement_extraction_ms": 366.02790000324603,
+      "ukf_update_ms": 1.4133000076981261,
+      "online_excluding_synthesis_ms": 367.44120001094416,
+      "quality_keys": [
+        "best_score",
+        "doa_disagreement_deg",
+        "gcc_azimuth_rad",
+        "gcc_elevation_rad",
+        "minimum_peak_quality",
+        "peak_margin",
+        "second_score"
+      ]
+    }
+  ],
+  "claim_boundary": [
+    "The measurement extraction and UKF update use current-ping observations and past filter state only.",
+    "Signal synthesis is simulation-only and is reported separately from online runtime.",
+    "This audit does not update RMSE, thresholds, or adopted claims."
+  ]
+}
