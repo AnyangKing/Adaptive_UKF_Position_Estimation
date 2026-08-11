@@ -168,7 +168,16 @@ def run():
             "mean_gain_m": float(np.mean(g)), "median_gain_m": float(np.median(g)),
             "improved_fraction": float(np.mean(g > 0)), "wilcoxon_greater_p": wp, "n": len(sub)}
     payload = {"config": {"distance_m": DISTANCE, "geoms_per_condition": GEOMS, "steps": STEPS,
+                          "settle_start": SETTLE_START,
                           "conditions": [c[0] for c in CONDITIONS],
+                          "condition_details": [
+                              {"name": c[0], "speed_m_s": c[1], "mode": c[2], "vertical_speed_m_s": c[3]}
+                              for c in CONDITIONS
+                          ],
+                          "fixed_carrier_khz": FIXED_CARRIER_HZ / 1000.0,
+                          "hop_carriers_khz": [float(c / 1000.0) for c in HOP_CARRIERS_HZ],
+                          "seed_roots": {"geometry": GEOM_ROOT, "ping": PING_ROOT},
+                          "truth_usage": "truth is used for signal synthesis, final RMSE, and offline elevation-residual lag-1 diagnosis only; it is not used for measurement extraction or adaptive-R decisions.",
                           "note": "정책동결(61/62)·신규 seed. M1 pooled 이득, M2 lag-1 백색화, M3 조건별"},
                "summary": summary, "runs": rows}
     (out / "moving_validation.json").write_text(json.dumps(payload, indent=2, ensure_ascii=False),
