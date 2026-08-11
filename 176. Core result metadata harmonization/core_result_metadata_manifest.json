@@ -1,0 +1,612 @@
+{
+  "created": "2026-08-11",
+  "purpose": "Harmonize provenance metadata for core results without changing adopted metrics.",
+  "entries": [
+    {
+      "folder": "61. 정지표적 도약 대규모 독립검증",
+      "stage": "independent_validation",
+      "result_file": "61. 정지표적 도약 대규모 독립검증\\results\\static_hop_validation.json",
+      "protocol_frozen_before_execution": true,
+      "automatic_manuscript_update_allowed": true,
+      "seed_roots": {
+        "geometry": 640000,
+        "ping": 613000,
+        "bootstrap": 600
+      },
+      "distances_m": [
+        100,
+        200,
+        400,
+        600
+      ],
+      "steps": 20,
+      "settle_start": 10,
+      "fixed_carrier_khz": 32.0,
+      "hop_carriers_khz": [
+        30.0,
+        30.210526315789473,
+        30.421052631578945,
+        30.63157894736842,
+        30.842105263157894,
+        31.052631578947366,
+        31.263157894736842,
+        31.473684210526315,
+        31.68421052631579,
+        31.894736842105264,
+        32.10526315789474,
+        32.31578947368421,
+        32.526315789473685,
+        32.73684210526316,
+        32.94736842105263,
+        33.15789473684211,
+        33.36842105263158,
+        33.578947368421055,
+        33.78947368421053,
+        34.0
+      ],
+      "truth_usage": "truth/static position is used for signal synthesis and settled RMSE only; not for measurement extraction or adaptive-R decisions.",
+      "claim_allowed": "static long-range carrier-agile RMSE improvement; strongest at 600 m",
+      "claim_forbidden": "moving-target RMSE improvement or practical uncalibrated USBL performance",
+      "headline_summary": {
+        "fixed_mean_rmse_m": 13.00651823018237,
+        "hop_mean_rmse_m": 8.869753936032971,
+        "fixed_median_rmse_m": 13.966343122135196,
+        "hop_median_rmse_m": 7.957650011222869,
+        "mean_improvement_m": 4.136764294149399,
+        "improvement_ci95": [
+          2.167699193408151,
+          6.054464685732498
+        ],
+        "wilcoxon_greater_p": 0.0008449554443359375,
+        "improved_fraction": 0.7,
+        "hop_under_1m_fraction": 0.0,
+        "fixed_div_rate": 0.0,
+        "hop_div_rate": 0.0,
+        "n": 20
+      },
+      "array": {
+        "sensor_count": 8,
+        "ring_radius_m": 0.033,
+        "vertical_spacing_m": 0.079
+      },
+      "signal": {
+        "sample_rate_hz": 192000.0,
+        "carrier_hz_default": 32000.0,
+        "chirp_bandwidth_hz": 12000.0,
+        "pulse_duration_s": 0.01,
+        "direct_path_gate_s": 0.005
+      },
+      "channel": {
+        "sound_speed_m_s": 1500.0,
+        "water_depth_m": 100.0,
+        "receiver_depth_m": 30.0,
+        "paths": [
+          "direct",
+          "surface",
+          "bottom"
+        ],
+        "ambient_noise": "colored frequency-shaped noise"
+      },
+      "usbl_protocol": {
+        "source_type": "one_way_synchronized_beacon",
+        "toa_mode": "one_way_absolute_toa",
+        "common_clock_bias_model": "not_included_in_canonical_validation",
+        "per_sensor_hardware_delay_model": "not_included_in_canonical_validation"
+      }
+    },
+    {
+      "folder": "63. 이동표적 도약 대규모검증 백색화 확인",
+      "stage": "mechanism_validation_boundary",
+      "result_file": "63. 이동표적 도약 대규모검증 백색화 확인\\results\\moving_validation.json",
+      "protocol_frozen_before_execution": true,
+      "automatic_manuscript_update_allowed": false,
+      "seed_roots": {
+        "geometry": 690000,
+        "ping": 1300000
+      },
+      "distance_m": 600.0,
+      "steps": 20,
+      "settle_start": 10,
+      "motion_conditions": [
+        {
+          "name": "radial_0.05",
+          "speed_m_s": 0.05,
+          "mode": "radial",
+          "vertical_speed_m_s": 0.0
+        },
+        {
+          "name": "radial_1.0",
+          "speed_m_s": 1.0,
+          "mode": "radial",
+          "vertical_speed_m_s": 0.0
+        },
+        {
+          "name": "tangential_1.0",
+          "speed_m_s": 1.0,
+          "mode": "tangential",
+          "vertical_speed_m_s": 0.0
+        },
+        {
+          "name": "tang_1.0_vz",
+          "speed_m_s": 1.0,
+          "mode": "tangential",
+          "vertical_speed_m_s": 0.08
+        }
+      ],
+      "fixed_carrier_khz": 32.0,
+      "hop_carriers_khz": [
+        30.0,
+        30.210526315789473,
+        30.421052631578945,
+        30.63157894736842,
+        30.842105263157894,
+        31.052631578947366,
+        31.263157894736842,
+        31.473684210526315,
+        31.68421052631579,
+        31.894736842105264,
+        32.10526315789474,
+        32.31578947368421,
+        32.526315789473685,
+        32.73684210526316,
+        32.94736842105263,
+        33.15789473684211,
+        33.36842105263158,
+        33.578947368421055,
+        33.78947368421053,
+        34.0
+      ],
+      "truth_usage": "truth is used for signal synthesis, final RMSE, and offline elevation-residual lag-1 diagnosis only; it is not used for measurement extraction or adaptive-R decisions.",
+      "claim_allowed": "moving-target residual lag-1 reduction as mechanism evidence",
+      "claim_forbidden": "moving-target pooled RMSE improvement",
+      "headline_summary": {
+        "M1_pooled_moving": {
+          "mean_gain_m": -0.10321251584048863,
+          "median_gain_m": 0.4058580030701049,
+          "gain_ci95": [
+            -2.8137759189700717,
+            2.8012718560057697
+          ],
+          "wilcoxon_greater_p": 0.3009655989495688,
+          "improved_fraction": 0.578125,
+          "n": 64
+        },
+        "M2_whitening": {
+          "mean_lag1_fixed": 0.4699501789122653,
+          "mean_lag1_hop": -0.20808210107765762,
+          "median_lag1_fixed": 0.48943954375203036,
+          "median_lag1_hop": -0.35098481198032117,
+          "wilcoxon_fixed_gt_hop_p": 5.564409070405107e-10,
+          "reduced_fraction": 0.84375
+        },
+        "M2b_lag_reduction_vs_gain": {
+          "spearman_rho": 0.2983974358974359,
+          "p": 0.01662170744956563
+        },
+        "M3_by_condition": {
+          "radial_0.05": {
+            "fixed_mean_rmse_m": 13.28673486756085,
+            "hop_mean_rmse_m": 11.669792089686013,
+            "mean_gain_m": 1.6169427778748386,
+            "median_gain_m": 1.1271527995701849,
+            "improved_fraction": 0.75,
+            "wilcoxon_greater_p": 0.096405029296875,
+            "n": 16
+          },
+          "radial_1.0": {
+            "fixed_mean_rmse_m": 17.608862983206343,
+            "hop_mean_rmse_m": 12.548812824546498,
+            "mean_gain_m": 5.060050158659845,
+            "median_gain_m": 0.3592108861499117,
+            "improved_fraction": 0.5625,
+            "wilcoxon_greater_p": 0.1261138916015625,
+            "n": 16
+          },
+          "tangential_1.0": {
+            "fixed_mean_rmse_m": 10.001824121621556,
+            "hop_mean_rmse_m": 11.712484840014778,
+            "mean_gain_m": -1.7106607183932239,
+            "median_gain_m": 0.7432620876199356,
+            "improved_fraction": 0.6875,
+            "wilcoxon_greater_p": 0.28094482421875,
+            "n": 16
+          },
+          "tang_1.0_vz": {
+            "fixed_mean_rmse_m": 12.82185443145503,
+            "hop_mean_rmse_m": 18.201036712958448,
+            "mean_gain_m": -5.3791822815034145,
+            "median_gain_m": -2.621095193420042,
+            "improved_fraction": 0.3125,
+            "wilcoxon_greater_p": 0.9673004150390625,
+            "n": 16
+          }
+        }
+      },
+      "array": {
+        "sensor_count": 8,
+        "ring_radius_m": 0.033,
+        "vertical_spacing_m": 0.079
+      },
+      "signal": {
+        "sample_rate_hz": 192000.0,
+        "carrier_hz_default": 32000.0,
+        "chirp_bandwidth_hz": 12000.0,
+        "pulse_duration_s": 0.01,
+        "direct_path_gate_s": 0.005
+      },
+      "channel": {
+        "sound_speed_m_s": 1500.0,
+        "water_depth_m": 100.0,
+        "receiver_depth_m": 30.0,
+        "paths": [
+          "direct",
+          "surface",
+          "bottom"
+        ],
+        "ambient_noise": "colored frequency-shaped noise"
+      },
+      "usbl_protocol": {
+        "source_type": "one_way_synchronized_beacon",
+        "toa_mode": "one_way_absolute_toa",
+        "common_clock_bias_model": "not_included_in_canonical_validation",
+        "per_sensor_hardware_delay_model": "not_included_in_canonical_validation"
+      }
+    },
+    {
+      "folder": "82. 준정지 속도 경계 검증 실행",
+      "stage": "validation_boundary",
+      "result_file": "82. 준정지 속도 경계 검증 실행\\results\\quasi_static_boundary.json",
+      "protocol_frozen_before_execution": true,
+      "automatic_manuscript_update_allowed": true,
+      "seed_roots": {
+        "geometry": 820000,
+        "ping": 1820000
+      },
+      "distance_m": 600.0,
+      "steps": 20,
+      "settle_start": 10,
+      "speeds_m_s": [
+        0.0,
+        0.005,
+        0.01,
+        0.03,
+        0.05,
+        0.1
+      ],
+      "motion_modes": [
+        "radial",
+        "tangential"
+      ],
+      "fixed_carrier_khz": 32.0,
+      "hop_carriers_khz": [
+        30.0,
+        30.210526315789473,
+        30.421052631578945,
+        30.63157894736842,
+        30.842105263157894,
+        31.052631578947366,
+        31.263157894736842,
+        31.473684210526315,
+        31.68421052631579,
+        31.894736842105264,
+        32.10526315789474,
+        32.31578947368421,
+        32.526315789473685,
+        32.73684210526316,
+        32.94736842105263,
+        33.15789473684211,
+        33.36842105263158,
+        33.578947368421055,
+        33.78947368421053,
+        34.0
+      ],
+      "truth_usage": "truth trajectory is used for signal synthesis, RMSE, and offline elevation residual lag-1 only.",
+      "claim_allowed": "continuous quasi-static boundary only up to 0.005 m/s",
+      "claim_forbidden": "monotonic validation up to 0.100 m/s",
+      "headline_summary": {
+        "fixed_mean_rmse_m": 11.98349245654168,
+        "hop_mean_rmse_m": 10.49208039267113,
+        "fixed_median_rmse_m": 10.999888545773633,
+        "hop_median_rmse_m": 8.496280351567233,
+        "fixed_p90_rmse_m": 19.730765083403938,
+        "hop_p90_rmse_m": 17.5007554818825,
+        "mean_gain_m": 1.4914120638705473,
+        "median_gain_m": 1.6853494211204088,
+        "gain_ci95_m": [
+          0.17708835810089749,
+          2.813857908158473
+        ],
+        "wilcoxon_gain_greater_p": 8.004858604148539e-05,
+        "improved_fraction": 0.6590909090909091,
+        "fixed_divergence_rate": 0.03787878787878788,
+        "hop_divergence_rate": 0.045454545454545456,
+        "mean_lag1_fixed": 0.21951511976022306,
+        "mean_lag1_hop": -0.10000039704956779,
+        "mean_lag1_reduction": 0.31951551680979084,
+        "wilcoxon_lag_reduction_greater_p": 9.165091548126545e-08,
+        "lag_reduced_fraction": 0.696969696969697,
+        "decision": "validated",
+        "n": 132,
+        "spearman_lag_reduction_vs_gain": {
+          "rho": 0.0353660461433805,
+          "p": 0.6872526050115038
+        }
+      },
+      "array": {
+        "sensor_count": 8,
+        "ring_radius_m": 0.033,
+        "vertical_spacing_m": 0.079
+      },
+      "signal": {
+        "sample_rate_hz": 192000.0,
+        "carrier_hz_default": 32000.0,
+        "chirp_bandwidth_hz": 12000.0,
+        "pulse_duration_s": 0.01,
+        "direct_path_gate_s": 0.005
+      },
+      "channel": {
+        "sound_speed_m_s": 1500.0,
+        "water_depth_m": 100.0,
+        "receiver_depth_m": 30.0,
+        "paths": [
+          "direct",
+          "surface",
+          "bottom"
+        ],
+        "ambient_noise": "colored frequency-shaped noise"
+      },
+      "usbl_protocol": {
+        "source_type": "one_way_synchronized_beacon",
+        "toa_mode": "one_way_absolute_toa",
+        "common_clock_bias_model": "not_included_in_canonical_validation",
+        "per_sensor_hardware_delay_model": "not_included_in_canonical_validation"
+      }
+    },
+    {
+      "folder": "160. Four carrier independent static validation",
+      "stage": "stage1b_independent_validation",
+      "result_file": "160. Four carrier independent static validation\\results\\four_carrier_independent_validation.json",
+      "protocol_frozen_before_execution": true,
+      "automatic_manuscript_update_allowed": false,
+      "seed_roots": {
+        "geometry": 1600000,
+        "ping": 1603000
+      },
+      "distance_m": 600,
+      "steps": 20,
+      "settle_start": 10,
+      "common_random_ping_seeds": true,
+      "schedule_carriers_khz": {
+        "fixed32": [
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0,
+          32.0
+        ],
+        "linear20_30_34": [
+          30.0,
+          30.210526315789473,
+          30.421052631578945,
+          30.63157894736842,
+          30.842105263157894,
+          31.052631578947366,
+          31.263157894736842,
+          31.473684210526315,
+          31.68421052631579,
+          31.894736842105264,
+          32.10526315789474,
+          32.31578947368421,
+          32.526315789473685,
+          32.73684210526316,
+          32.94736842105263,
+          33.15789473684211,
+          33.36842105263158,
+          33.578947368421055,
+          33.78947368421053,
+          34.0
+        ],
+        "four_carrier_cycle": [
+          30.0,
+          31.333333333,
+          32.666666667,
+          34.0,
+          30.0,
+          31.333333333,
+          32.666666667,
+          34.0,
+          30.0,
+          31.333333333,
+          32.666666667,
+          34.0,
+          30.0,
+          31.333333333,
+          32.666666667,
+          34.0,
+          30.0,
+          31.333333333,
+          32.666666667,
+          34.0
+        ]
+      },
+      "truth_usage": "truth/static position is used for signal synthesis and settled error metrics only.",
+      "claim_allowed": "four-carrier sparse schedule failed independent validation; linear20 remains supported",
+      "claim_forbidden": "four-carrier performance claim",
+      "headline_summary": {
+        "fixed32": {
+          "mean_settled_rmse_m": 11.570888216159593,
+          "median_settled_rmse_m": 11.443127926966412,
+          "mean_p90_settled_error_m": 11.840326471316835,
+          "mean_abs_elevation_innovation_lag1": 0.7632696614476944,
+          "divergence_rate": 0.0,
+          "filter_exceptions": 0,
+          "n_geometries": 20
+        },
+        "linear20_30_34": {
+          "mean_settled_rmse_m": 8.7977890303815,
+          "median_settled_rmse_m": 7.765286636864459,
+          "mean_p90_settled_error_m": 9.889353073894473,
+          "mean_abs_elevation_innovation_lag1": 0.3358835352291357,
+          "divergence_rate": 0.0,
+          "filter_exceptions": 0,
+          "n_geometries": 20
+        },
+        "four_carrier_cycle": {
+          "mean_settled_rmse_m": 11.924792524663427,
+          "median_settled_rmse_m": 9.32263667457429,
+          "mean_p90_settled_error_m": 14.292148369813699,
+          "mean_abs_elevation_innovation_lag1": 0.3510133798834566,
+          "divergence_rate": 0.05,
+          "filter_exceptions": 0,
+          "n_geometries": 20
+        }
+      },
+      "array": {
+        "sensor_count": 8,
+        "ring_radius_m": 0.033,
+        "vertical_spacing_m": 0.079
+      },
+      "signal": {
+        "sample_rate_hz": 192000.0,
+        "carrier_hz_default": 32000.0,
+        "chirp_bandwidth_hz": 12000.0,
+        "pulse_duration_s": 0.01,
+        "direct_path_gate_s": 0.005
+      },
+      "channel": {
+        "sound_speed_m_s": 1500.0,
+        "water_depth_m": 100.0,
+        "receiver_depth_m": 30.0,
+        "paths": [
+          "direct",
+          "surface",
+          "bottom"
+        ],
+        "ambient_noise": "colored frequency-shaped noise"
+      },
+      "usbl_protocol": {
+        "source_type": "one_way_synchronized_beacon",
+        "toa_mode": "one_way_absolute_toa",
+        "common_clock_bias_model": "not_included_in_canonical_validation",
+        "per_sensor_hardware_delay_model": "not_included_in_canonical_validation"
+      }
+    },
+    {
+      "folder": "162. Carrier transition TOA guard pilot",
+      "stage": "post_hoc_development_pilot",
+      "result_file": "162. Carrier transition TOA guard pilot\\results\\transition_toa_guard_pilot.json",
+      "protocol_frozen_before_execution": false,
+      "automatic_manuscript_update_allowed": false,
+      "development_geometries": [
+        2,
+        5,
+        19
+      ],
+      "source_diagnostic": "161. Sparse carrier tail mechanism diagnostic",
+      "range_jump_threshold_m": 0.5,
+      "truth_usage": "post-hoc development geometry is used for pilot evaluation; no manuscript performance claim allowed.",
+      "claim_allowed": "future-work mechanism/pilot only",
+      "claim_forbidden": "TOA guard performance claim before independent validation",
+      "headline_summary": {
+        "fixed32": {
+          "baseline_adaptive_r": {
+            "mean_settled_rmse_m": 9.486814747600791,
+            "median_settled_rmse_m": 10.15059265482023,
+            "divergence_count": 0,
+            "filter_exceptions": 0,
+            "total_toa_guards": 0,
+            "n_geometries": 3
+          },
+          "transition_toa_guard": {
+            "mean_settled_rmse_m": 9.486814747600791,
+            "median_settled_rmse_m": 10.15059265482023,
+            "divergence_count": 0,
+            "filter_exceptions": 0,
+            "total_toa_guards": 0,
+            "n_geometries": 3
+          }
+        },
+        "linear20_30_34": {
+          "baseline_adaptive_r": {
+            "mean_settled_rmse_m": 6.607863314138295,
+            "median_settled_rmse_m": 6.92916015858368,
+            "divergence_count": 0,
+            "filter_exceptions": 0,
+            "total_toa_guards": 0,
+            "n_geometries": 3
+          },
+          "transition_toa_guard": {
+            "mean_settled_rmse_m": 6.606709016737291,
+            "median_settled_rmse_m": 6.92916015858368,
+            "divergence_count": 0,
+            "filter_exceptions": 0,
+            "total_toa_guards": 1,
+            "n_geometries": 3
+          }
+        },
+        "four_carrier_cycle": {
+          "baseline_adaptive_r": {
+            "mean_settled_rmse_m": 23.19822759400544,
+            "median_settled_rmse_m": 9.029942825426204,
+            "divergence_count": 1,
+            "filter_exceptions": 0,
+            "total_toa_guards": 0,
+            "n_geometries": 3
+          },
+          "transition_toa_guard": {
+            "mean_settled_rmse_m": 8.272530785369336,
+            "median_settled_rmse_m": 8.224200584555204,
+            "divergence_count": 0,
+            "filter_exceptions": 0,
+            "total_toa_guards": 9,
+            "n_geometries": 3
+          }
+        }
+      },
+      "array": {
+        "sensor_count": 8,
+        "ring_radius_m": 0.033,
+        "vertical_spacing_m": 0.079
+      },
+      "signal": {
+        "sample_rate_hz": 192000.0,
+        "carrier_hz_default": 32000.0,
+        "chirp_bandwidth_hz": 12000.0,
+        "pulse_duration_s": 0.01,
+        "direct_path_gate_s": 0.005
+      },
+      "channel": {
+        "sound_speed_m_s": 1500.0,
+        "water_depth_m": 100.0,
+        "receiver_depth_m": 30.0,
+        "paths": [
+          "direct",
+          "surface",
+          "bottom"
+        ],
+        "ambient_noise": "colored frequency-shaped noise"
+      },
+      "usbl_protocol": {
+        "source_type": "one_way_synchronized_beacon",
+        "toa_mode": "one_way_absolute_toa",
+        "common_clock_bias_model": "not_included_in_canonical_validation",
+        "per_sensor_hardware_delay_model": "not_included_in_canonical_validation"
+      }
+    }
+  ]
+}
