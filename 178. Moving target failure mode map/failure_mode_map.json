@@ -1,0 +1,113 @@
+{
+  "stage": "failure_map_no_new_simulation",
+  "source_folders": [
+    "63. 이동표적 도약 대규모검증 백색화 확인",
+    "64. Whitening-aware adaptive-R 도약 안전화",
+    "65. Anchor-hop schedule 이동표적 안전화",
+    "66. Anchor-hop schedule 중간규모 독립검증",
+    "67. Motion-aware anchor-hop schedule 조건분기 검증",
+    "160. Four carrier independent static validation",
+    "161. Sparse carrier tail mechanism diagnostic",
+    "162. Carrier transition TOA guard pilot"
+  ],
+  "failure_modes": [
+    {
+      "mode": "motion_self_whitening",
+      "evidence_folder": "63. 이동표적 도약 대규모검증 백색화 확인",
+      "observable_runtime_indicators": [
+        "short-window DOA innovation variance",
+        "GCC-SRP disagreement",
+        "NIS tail"
+      ],
+      "offline_only_indicators": [
+        "true elevation residual lag-1",
+        "fixed-vs-hop paired RMSE gain",
+        "ground-truth motion class"
+      ],
+      "evidence": {
+        "pooled_mean_gain_m": -0.10321251584048863,
+        "pooled_wilcoxon_p": 0.3009655989495688,
+        "lag1_fixed": 0.4699501789122653,
+        "lag1_hop": -0.20808210107765762,
+        "lag1_p": 5.564409070405107e-10
+      },
+      "interpretation": "Carrier agility changes residual correlation, but target motion already changes the multipath phase under fixed carrier; whitening alone is not enough to claim RMSE gain.",
+      "next_action": "Do not use lag-1 reduction as a moving-target performance claim."
+    },
+    {
+      "mode": "schedule_safety_evaporation",
+      "evidence_folder": "64. Whitening-aware adaptive-R 도약 안전화; 65. Anchor-hop schedule 이동표적 안전화; 66. Anchor-hop schedule 중간규모 독립검증; 67. Motion-aware anchor-hop schedule 조건분기 검증",
+      "observable_runtime_indicators": [
+        "carrier schedule",
+        "GCC-SRP disagreement",
+        "NIS",
+        "observed TOA/TDOA jumps"
+      ],
+      "offline_only_indicators": [
+        "oracle condition label",
+        "paired RMSE gain"
+      ],
+      "evidence": {
+        "64_hop_always_gain_vs_fixed_m": -0.7013568738108044,
+        "65_hop_always_gain_vs_fixed_m": 0.8094182546731183,
+        "66_hop_always_gain_vs_fixed_m": -1.6895574340115846,
+        "67_condition_aware_gain_vs_fixed_m": -0.3058877437720982,
+        "67_condition_aware_p": 0.9722081706146156
+      },
+      "interpretation": "More clever carrier schedules did not reliably beat fixed carrier on independent moving seeds. Even an oracle condition-aware rule failed to reproduce a meaningful gain.",
+      "next_action": "Deprioritize schedule-only motion-aware methods."
+    },
+    {
+      "mode": "carrier_transition_toa_branch_switching",
+      "evidence_folder": "160. Four carrier independent static validation; 161. Sparse carrier tail mechanism diagnostic; 162. Carrier transition TOA guard pilot",
+      "observable_runtime_indicators": [
+        "reference TOA adjacent range jump",
+        "carrier change flag",
+        "TOA block NIS",
+        "matched-filter peak quality"
+      ],
+      "offline_only_indicators": [
+        "post-validation selected tail geometry"
+      ],
+      "evidence": {
+        "160_four_carrier_mean_rmse_m": 11.924792524663427,
+        "160_four_carrier_divergence_rate": 0.05,
+        "162_stage": "post_hoc_development_pilot",
+        "162_decision": "advance_to_independent_validation",
+        "162_four_baseline_mean_rmse_m": 23.19822759400544,
+        "162_four_guard_mean_rmse_m": 8.272530785369336
+      },
+      "interpretation": "TOA branch switching is an observed-signal failure mechanism, not a truth-derived oracle feature. The existing guard is only post-hoc/static, so it must be validated independently.",
+      "next_action": "Run 179 independent validation before using the guard as a method component."
+    }
+  ],
+  "candidate_ranking": [
+    {
+      "candidate": "TOA branch switching independent validation",
+      "priority": 1,
+      "reason": "Uses observable TOA jump + carrier transition and already passed a post-hoc pilot.",
+      "next_folder": 179,
+      "claim_status": "validation_candidate_not_claimed"
+    },
+    {
+      "candidate": "carrier-transition-aware Adaptive-R",
+      "priority": 2,
+      "reason": "Generalizes TOA guard from static tail control into an observed-risk covariance routing rule.",
+      "next_folder": 180,
+      "claim_status": "development_candidate"
+    },
+    {
+      "candidate": "motion-aware adaptive transmission schedule",
+      "priority": 3,
+      "reason": "Oracle condition-aware schedule failed on independent seed; runtime risk detection has a low ceiling.",
+      "next_folder": null,
+      "claim_status": "future_work_only"
+    }
+  ],
+  "claim_boundary": [
+    "Moving-target pooled RMSE improvement is not established.",
+    "Residual lag-1 reduction is mechanism evidence only.",
+    "Post-hoc/oracle results cannot be promoted to method performance without independent validation.",
+    "Future moving-target methods must use only observed TOA/TDOA/DOA/quality/NIS features."
+  ]
+}
