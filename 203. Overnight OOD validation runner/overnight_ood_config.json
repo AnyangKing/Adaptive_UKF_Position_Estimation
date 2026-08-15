@@ -1,0 +1,18 @@
+{
+  "stage": "overnight_ood_motion_transition_aware_validation",
+  "distances_m": [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
+  "conditions": [
+    "accelerating_radial",
+    "curved_arc",
+    "mixed_radial_tangential",
+    "vertical_sine"
+  ],
+  "geoms_per_distance_condition": 12,
+  "geometry_seed_root": 2020000,
+  "ping_seed_root": 2023000,
+  "results_dir": "overnight_results",
+  "aggregate_json": "overnight_ood_validation_aggregate.json",
+  "aggregate_markdown": "overnight_ood_validation_summary.md",
+  "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+  "claim_boundary": "large OOD simulation validation; not real-water validation."
+}
