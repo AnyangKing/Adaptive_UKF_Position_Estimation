@@ -1,0 +1,163 @@
+{
+  "stage": "supplement_package_v4_dry_run",
+  "required_count": 21,
+  "missing_count": 0,
+  "missing": [],
+  "files": [
+    {
+      "pattern": "61. */README.md",
+      "path": "61. 정지표적 도약 대규모 독립검증/README.md",
+      "exists": true,
+      "bytes": 3753,
+      "sha256": "73d706bbe5313a05ac1733279b8dabea800952e7236cd42db21171c82616f4d3"
+    },
+    {
+      "pattern": "63. */README.md",
+      "path": "63. 이동표적 도약 대규모검증 백색화 확인/README.md",
+      "exists": true,
+      "bytes": 5308,
+      "sha256": "60b5665e13ebfca308fe9af31c6a0e0f49048423bdff9d24ba59fefd533d1325"
+    },
+    {
+      "pattern": "82. */result_summary.md",
+      "path": "82. 준정지 속도 경계 검증 실행/result_summary.md",
+      "exists": true,
+      "bytes": 3847,
+      "sha256": "951e890d6e8d76581440c143ea9c69105313605d22c5311e9b2704cbe01d5c5c"
+    },
+    {
+      "pattern": "145. Two-ray mechanism evidence closure/README.md",
+      "path": "145. Two-ray mechanism evidence closure/README.md",
+      "exists": true,
+      "bytes": 1763,
+      "sha256": "e3a5b65dbca35972c0a827579b5e706b4e2386dd2ec0351eed7de0736cf1cb95"
+    },
+    {
+      "pattern": "191. Moving full range transition aware independent validation/moving_full_range_independent_validation.json",
+      "path": "191. Moving full range transition aware independent validation/moving_full_range_independent_validation.json",
+      "exists": true,
+      "bytes": 750020,
+      "sha256": "de43123ad9f90951ce51b93157091ded021b94a25d6c343d63c94ae1e1d57ac6"
+    },
+    {
+      "pattern": "194. Figure and table update for moving full range/moving_full_range_source.csv",
+      "path": "194. Figure and table update for moving full range/moving_full_range_source.csv",
+      "exists": true,
+      "bytes": 665,
+      "sha256": "4481ea524876b433c02c68198798e94775ce99b3cdefa844158c5dcbc3793271"
+    },
+    {
+      "pattern": "204. Overnight OOD validation aggregate result/compact_metrics.json",
+      "path": "204. Overnight OOD validation aggregate result/compact_metrics.json",
+      "exists": true,
+      "bytes": 22971,
+      "sha256": "8adcbd878b8381dc0010a16385e6965edd428d647b339aed015c077c2ec280c1"
+    },
+    {
+      "pattern": "209. Supplement source data manifest OOD refresh/source_data_manifest_204.md",
+      "path": "209. Supplement source data manifest OOD refresh/source_data_manifest_204.md",
+      "exists": true,
+      "bytes": 1999,
+      "sha256": "d354019e27605981d5ce97cdd59e1fc5f7c5d4c067bbd070c60ebb4d3f922f47"
+    },
+    {
+      "pattern": "215. Hardware frequency response sensitivity/hardware_response_sensitivity.json",
+      "path": "215. Hardware frequency response sensitivity/hardware_response_sensitivity.json",
+      "exists": true,
+      "bytes": 871931,
+      "sha256": "e3d3848e9ca56a8fd7b288fae290cb42cf2880f64410841c174cebec2c863715"
+    },
+    {
+      "pattern": "215. Hardware frequency response sensitivity/result_summary.md",
+      "path": "215. Hardware frequency response sensitivity/result_summary.md",
+      "exists": true,
+      "bytes": 2009,
+      "sha256": "b63561455570a605481bd7fe7fe58d8e3fe62a069329f22e5105de4c54f912ef"
+    },
+    {
+      "pattern": "216. Extended OOD motion family validation/extended_ood_motion_family_validation.json",
+      "path": "216. Extended OOD motion family validation/extended_ood_motion_family_validation.json",
+      "exists": true,
+      "bytes": 214583,
+      "sha256": "8912a0a19760cd0b143adc964c050665136cbe0b936b0777944a90e127f50395"
+    },
+    {
+      "pattern": "216. Extended OOD motion family validation/result_summary.md",
+      "path": "216. Extended OOD motion family validation/result_summary.md",
+      "exists": true,
+      "bytes": 1998,
+      "sha256": "f04b89039344723a3a8a8f152cc01293420031c3015705fb6c1e8027f65aa800"
+    },
+    {
+      "pattern": "paper/figures/fig1_system_concept.png",
+      "path": "paper/figures/fig1_system_concept.png",
+      "exists": true,
+      "bytes": 477109,
+      "sha256": "8d05016288d2c5d08f81e3cb4dd5219083fd473a09dd617d88e6ee1bfae05732"
+    },
+    {
+      "pattern": "paper/figures/fig2_frequency_agile_bias.png",
+      "path": "paper/figures/fig2_frequency_agile_bias.png",
+      "exists": true,
+      "bytes": 95294,
+      "sha256": "cec40564c317612bf093bd3017ca270626e350a4360218e7a50736c650fbaab2"
+    },
+    {
+      "pattern": "paper/figures/fig3_static_600m_paired_rmse.png",
+      "path": "paper/figures/fig3_static_600m_paired_rmse.png",
+      "exists": true,
+      "bytes": 261909,
+      "sha256": "11467a68d1413326a1a2dee4ede26fa232ced6fc1b81fee1b8843d712faa7d28"
+    },
+    {
+      "pattern": "paper/figures/fig4_moving_whitening_lag1.png",
+      "path": "paper/figures/fig4_moving_whitening_lag1.png",
+      "exists": true,
+      "bytes": 494597,
+      "sha256": "30e3ae03c8cc379896fdd70b987e4862023b158d3de2a81bb576b1a89fb7bee8"
+    },
+    {
+      "pattern": "paper/figures/fig5_quasi_static_speed_boundary.png",
+      "path": "paper/figures/fig5_quasi_static_speed_boundary.png",
+      "exists": true,
+      "bytes": 179563,
+      "sha256": "99231ced6f162996428ee1b3e66d2357e83168802d59243d3e8e59624097368c"
+    },
+    {
+      "pattern": "paper/figures/fig6_crlb_floor.png",
+      "path": "paper/figures/fig6_crlb_floor.png",
+      "exists": true,
+      "bytes": 155194,
+      "sha256": "8e032add037fede683aa2cfe5a250716fca962ceb6f540705dabca00da2cfabb"
+    },
+    {
+      "pattern": "paper/figures/fig7_moving_full_range_rmse.png",
+      "path": "paper/figures/fig7_moving_full_range_rmse.png",
+      "exists": true,
+      "bytes": 108701,
+      "sha256": "8fe877e384c6660ccf1c3996e8807a7132a44e46de948d4135f02327a4585366"
+    },
+    {
+      "pattern": "paper/figures/fig8_moving_full_range_gain_tail.png",
+      "path": "paper/figures/fig8_moving_full_range_gain_tail.png",
+      "exists": true,
+      "bytes": 111944,
+      "sha256": "b9d4066f740fe2f6ad0c784ce7dbe1dcf07d21434b59dfbed885fff7b72c388a"
+    },
+    {
+      "pattern": "paper/figures/fig_tworay_fit.png",
+      "path": "paper/figures/fig_tworay_fit.png",
+      "exists": true,
+      "bytes": 159608,
+      "sha256": "de3d71050ca6bf86024604f3f1dc66d259e65b9d6257158076d6d8ce7e4e7c8c"
+    }
+  ],
+  "excluded_prefixes": [
+    "paper/manuscript",
+    ".git/",
+    ".claude/",
+    "study_exports/",
+    "203. Overnight OOD validation runner/overnight_results/"
+  ],
+  "claim_boundary": "inventory only; no ZIP or public release created"
+}
