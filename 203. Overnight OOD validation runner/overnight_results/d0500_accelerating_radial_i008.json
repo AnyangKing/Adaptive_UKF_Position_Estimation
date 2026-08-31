@@ -1,0 +1,61 @@
+{
+  "case_id": "d0500_accelerating_radial_i008",
+  "case": {
+    "distance_m": 500.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 8
+  },
+  "rows": [
+    {
+      "distance_m": 500.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 8.932932667163834,
+      "median_settled_error_m": 8.925355763737606,
+      "p90_settled_error_m": 9.115910921536678,
+      "maximum_position_error_m": 9.292810331312472,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 500.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 8.060308349159627,
+      "median_settled_error_m": 8.01180841392745,
+      "p90_settled_error_m": 9.843900578461042,
+      "maximum_position_error_m": 12.949308292091334,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 500.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 8.060155699687707,
+      "median_settled_error_m": 8.011330663569918,
+      "p90_settled_error_m": 9.8437521925146,
+      "maximum_position_error_m": 12.949308292091334,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 3.7935702766405885
+    }
+  ],
+  "runtime_s": 17.28170919418335,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "case_id": "d0000_accelerating_radial_i000",
+  "case": {
+    "distance_m": 0.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 0
+  },
+  "rows": [
+    {
+      "distance_m": 0.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 1.5274789313858617,
+      "median_settled_error_m": 1.1085955911500533,
+      "p90_settled_error_m": 2.2083971106054627,
+      "maximum_position_error_m": 7.720226638899632,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 0.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 1.709093665384267,
+      "median_settled_error_m": 1.5136688917106298,
+      "p90_settled_error_m": 2.5523339284241437,
+      "maximum_position_error_m": 6.591452865667713,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 0.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 1.709093665384267,
+      "median_settled_error_m": 1.5136688917106298,
+      "p90_settled_error_m": 2.5523339284241437,
+      "maximum_position_error_m": 6.591452865667713,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    }
+  ],
+  "runtime_s": 3.578267812728882,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

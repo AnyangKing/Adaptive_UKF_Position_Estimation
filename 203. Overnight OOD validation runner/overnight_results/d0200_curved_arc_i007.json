@@ -1,0 +1,61 @@
+{
+  "case_id": "d0200_curved_arc_i007",
+  "case": {
+    "distance_m": 200.0,
+    "condition_index": 1,
+    "condition": "curved_arc",
+    "mode": "curved_arc",
+    "index": 7
+  },
+  "rows": [
+    {
+      "distance_m": 200.0,
+      "condition": "curved_arc",
+      "index": 7,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 19.87563483823275,
+      "median_settled_error_m": 13.701691002457029,
+      "p90_settled_error_m": 31.679090045284493,
+      "maximum_position_error_m": 31.932043735892034,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 200.0,
+      "condition": "curved_arc",
+      "index": 7,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 27.000745646548094,
+      "median_settled_error_m": 16.55056802550773,
+      "p90_settled_error_m": 47.05875146299914,
+      "maximum_position_error_m": 50.2710927936475,
+      "diverged": true,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 200.0,
+      "condition": "curved_arc",
+      "index": 7,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 13.172966912305677,
+      "median_settled_error_m": 3.609148484131227,
+      "p90_settled_error_m": 22.64925410777599,
+      "maximum_position_error_m": 25.36813903952023,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 5,
+      "mean_transition_scale": 80.48355546611008
+    }
+  ],
+  "runtime_s": 9.204582452774048,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

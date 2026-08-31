@@ -1,0 +1,61 @@
+{
+  "case_id": "d0700_mixed_radial_tangential_i008",
+  "case": {
+    "distance_m": 700.0,
+    "condition_index": 2,
+    "condition": "mixed_radial_tangential",
+    "mode": "mixed_radial_tangential",
+    "index": 8
+  },
+  "rows": [
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 22.10354511245307,
+      "median_settled_error_m": 21.991289510997,
+      "p90_settled_error_m": 24.711389641621363,
+      "maximum_position_error_m": 25.35713835210975,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 22.22804521465815,
+      "median_settled_error_m": 22.07049024547981,
+      "p90_settled_error_m": 25.222754445455816,
+      "maximum_position_error_m": 25.837505973226367,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 22.22804521465815,
+      "median_settled_error_m": 22.07049024547981,
+      "p90_settled_error_m": 25.222754445455816,
+      "maximum_position_error_m": 25.837505973226367,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    }
+  ],
+  "runtime_s": 18.515764236450195,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "case_id": "d0400_accelerating_radial_i000",
+  "case": {
+    "distance_m": 400.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 0
+  },
+  "rows": [
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 6.551571584254705,
+      "median_settled_error_m": 6.568079171136667,
+      "p90_settled_error_m": 7.372074509416351,
+      "maximum_position_error_m": 8.134004920766252,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 7.398291909945041,
+      "median_settled_error_m": 7.029207690433719,
+      "p90_settled_error_m": 8.749958614134181,
+      "maximum_position_error_m": 9.5190106026627,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 7.3974329240648515,
+      "median_settled_error_m": 7.026920470453482,
+      "p90_settled_error_m": 8.74989411202788,
+      "maximum_position_error_m": 9.5195610767734,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 3.77595686654934
+    }
+  ],
+  "runtime_s": 10.68666386604309,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

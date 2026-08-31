@@ -1,0 +1,61 @@
+{
+  "case_id": "d1000_accelerating_radial_i000",
+  "case": {
+    "distance_m": 1000.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 0
+  },
+  "rows": [
+    {
+      "distance_m": 1000.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 12.685517451585277,
+      "median_settled_error_m": 10.712854979287126,
+      "p90_settled_error_m": 16.907661802893987,
+      "maximum_position_error_m": 24.2657740378995,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 1000.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 7.608269141101194,
+      "median_settled_error_m": 7.1538785505718465,
+      "p90_settled_error_m": 9.154248418203563,
+      "maximum_position_error_m": 14.241587656193689,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 1000.0,
+      "condition": "accelerating_radial",
+      "index": 0,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 5.286948440955894,
+      "median_settled_error_m": 5.350049903937534,
+      "p90_settled_error_m": 6.50153046698473,
+      "maximum_position_error_m": 11.799809229655398,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 11.663332029510416
+    }
+  ],
+  "runtime_s": 34.79514479637146,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

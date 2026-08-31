@@ -1,0 +1,61 @@
+{
+  "case_id": "d1000_mixed_radial_tangential_i008",
+  "case": {
+    "distance_m": 1000.0,
+    "condition_index": 2,
+    "condition": "mixed_radial_tangential",
+    "mode": "mixed_radial_tangential",
+    "index": 8
+  },
+  "rows": [
+    {
+      "distance_m": 1000.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 12.061894205492555,
+      "median_settled_error_m": 10.358330115126535,
+      "p90_settled_error_m": 16.92352792097689,
+      "maximum_position_error_m": 18.953625651857745,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 1000.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 25.830427786661318,
+      "median_settled_error_m": 25.302038627735733,
+      "p90_settled_error_m": 31.930363261844725,
+      "maximum_position_error_m": 35.318404924265835,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 1000.0,
+      "condition": "mixed_radial_tangential",
+      "index": 8,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 14.17587888582932,
+      "median_settled_error_m": 14.275391302434006,
+      "p90_settled_error_m": 19.4500936200356,
+      "maximum_position_error_m": 19.54026071124226,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 9,
+      "mean_transition_scale": 49.22960549183804
+    }
+  ],
+  "runtime_s": 33.585593700408936,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

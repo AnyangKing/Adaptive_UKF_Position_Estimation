@@ -1,0 +1,61 @@
+{
+  "case_id": "d0400_accelerating_radial_i001",
+  "case": {
+    "distance_m": 400.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 1
+  },
+  "rows": [
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 17.240877094937854,
+      "median_settled_error_m": 17.658099566319194,
+      "p90_settled_error_m": 20.59246444836116,
+      "maximum_position_error_m": 52.37819312013441,
+      "diverged": true,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 6.403031009519006,
+      "median_settled_error_m": 5.973077886427372,
+      "p90_settled_error_m": 8.89976961466524,
+      "maximum_position_error_m": 30.083139689082277,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 400.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 6.590309082837609,
+      "median_settled_error_m": 6.803067449479389,
+      "p90_settled_error_m": 8.18218301795378,
+      "maximum_position_error_m": 13.775986218387606,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 15,
+      "mean_transition_scale": 35.960473724986564
+    }
+  ],
+  "runtime_s": 10.309643745422363,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

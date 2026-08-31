@@ -1,0 +1,61 @@
+{
+  "case_id": "d0900_accelerating_radial_i011",
+  "case": {
+    "distance_m": 900.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 11
+  },
+  "rows": [
+    {
+      "distance_m": 900.0,
+      "condition": "accelerating_radial",
+      "index": 11,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 8.826700537756018,
+      "median_settled_error_m": 8.747939146810713,
+      "p90_settled_error_m": 9.321237657936795,
+      "maximum_position_error_m": 10.193823720913784,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 900.0,
+      "condition": "accelerating_radial",
+      "index": 11,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 10.353694402546793,
+      "median_settled_error_m": 10.409269574266926,
+      "p90_settled_error_m": 11.219602986740423,
+      "maximum_position_error_m": 11.306439432167446,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 900.0,
+      "condition": "accelerating_radial",
+      "index": 11,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 10.353523159505016,
+      "median_settled_error_m": 10.410024233529835,
+      "p90_settled_error_m": 11.218774564484558,
+      "maximum_position_error_m": 11.306267560281338,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 3.776714704979901
+    }
+  ],
+  "runtime_s": 19.998916387557983,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

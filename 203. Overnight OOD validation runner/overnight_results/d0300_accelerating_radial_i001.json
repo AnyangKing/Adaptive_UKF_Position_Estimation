@@ -1,0 +1,61 @@
+{
+  "case_id": "d0300_accelerating_radial_i001",
+  "case": {
+    "distance_m": 300.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 1
+  },
+  "rows": [
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 3.5999874300732975,
+      "median_settled_error_m": 3.632508969722193,
+      "p90_settled_error_m": 3.931633440731533,
+      "maximum_position_error_m": 4.04573568129852,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 2.0664522935235214,
+      "median_settled_error_m": 1.9068921889451667,
+      "p90_settled_error_m": 2.421677639805569,
+      "maximum_position_error_m": 3.378749856686129,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 1,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 2.065952956562858,
+      "median_settled_error_m": 1.9057077016309545,
+      "p90_settled_error_m": 2.420926023475867,
+      "maximum_position_error_m": 3.378749856686129,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 3.7696004841576563
+    }
+  ],
+  "runtime_s": 9.771994829177856,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

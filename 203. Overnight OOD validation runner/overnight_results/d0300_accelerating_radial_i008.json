@@ -1,0 +1,61 @@
+{
+  "case_id": "d0300_accelerating_radial_i008",
+  "case": {
+    "distance_m": 300.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 8
+  },
+  "rows": [
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 79.9136579754811,
+      "median_settled_error_m": 82.07227750432654,
+      "p90_settled_error_m": 99.86521618594641,
+      "maximum_position_error_m": 115.07646471999963,
+      "diverged": true,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 54.83363497903354,
+      "median_settled_error_m": 52.663261184493265,
+      "p90_settled_error_m": 68.05801065878343,
+      "maximum_position_error_m": 72.12566401849573,
+      "diverged": true,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 8,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 9.680814553350649,
+      "median_settled_error_m": 7.382654857678668,
+      "p90_settled_error_m": 14.632462655654805,
+      "maximum_position_error_m": 17.275962853825515,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 12,
+      "mean_transition_scale": 52.17568235569243
+    }
+  ],
+  "runtime_s": 9.640710830688477,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

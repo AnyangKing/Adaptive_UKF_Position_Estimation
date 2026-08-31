@@ -1,0 +1,61 @@
+{
+  "case_id": "d0700_mixed_radial_tangential_i003",
+  "case": {
+    "distance_m": 700.0,
+    "condition_index": 2,
+    "condition": "mixed_radial_tangential",
+    "mode": "mixed_radial_tangential",
+    "index": 3
+  },
+  "rows": [
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 3,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 5.792761892297581,
+      "median_settled_error_m": 5.56019483324633,
+      "p90_settled_error_m": 7.701772213984149,
+      "maximum_position_error_m": 8.231793016195002,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 3,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 4.51038498139002,
+      "median_settled_error_m": 4.303737375971708,
+      "p90_settled_error_m": 5.492290007482651,
+      "maximum_position_error_m": 10.765076186270788,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 700.0,
+      "condition": "mixed_radial_tangential",
+      "index": 3,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 4.51038498139002,
+      "median_settled_error_m": 4.303737375971708,
+      "p90_settled_error_m": 5.492290007482651,
+      "maximum_position_error_m": 10.765076186270788,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    }
+  ],
+  "runtime_s": 17.95240545272827,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

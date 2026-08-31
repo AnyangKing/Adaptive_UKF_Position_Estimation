@@ -1,0 +1,61 @@
+{
+  "case_id": "d0200_vertical_sine_i003",
+  "case": {
+    "distance_m": 200.0,
+    "condition_index": 3,
+    "condition": "vertical_sine",
+    "mode": "vertical_sine",
+    "index": 3
+  },
+  "rows": [
+    {
+      "distance_m": 200.0,
+      "condition": "vertical_sine",
+      "index": 3,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 2.219421847436568,
+      "median_settled_error_m": 1.8867786618029712,
+      "p90_settled_error_m": 3.033645523764656,
+      "maximum_position_error_m": 3.393850822020938,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 200.0,
+      "condition": "vertical_sine",
+      "index": 3,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 2.492401790056915,
+      "median_settled_error_m": 2.532776926561982,
+      "p90_settled_error_m": 3.2676566169676193,
+      "maximum_position_error_m": 3.996697113406,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 200.0,
+      "condition": "vertical_sine",
+      "index": 3,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 2.492401790056915,
+      "median_settled_error_m": 2.532776926561982,
+      "p90_settled_error_m": 3.2676566169676193,
+      "maximum_position_error_m": 3.996697113406,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    }
+  ],
+  "runtime_s": 9.372432708740234,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

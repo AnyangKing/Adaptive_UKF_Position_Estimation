@@ -1,0 +1,61 @@
+{
+  "case_id": "d0900_mixed_radial_tangential_i001",
+  "case": {
+    "distance_m": 900.0,
+    "condition_index": 2,
+    "condition": "mixed_radial_tangential",
+    "mode": "mixed_radial_tangential",
+    "index": 1
+  },
+  "rows": [
+    {
+      "distance_m": 900.0,
+      "condition": "mixed_radial_tangential",
+      "index": 1,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 18.02977991707468,
+      "median_settled_error_m": 18.330842844469366,
+      "p90_settled_error_m": 19.828431268792613,
+      "maximum_position_error_m": 20.22908119929,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 900.0,
+      "condition": "mixed_radial_tangential",
+      "index": 1,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 12.291588701144965,
+      "median_settled_error_m": 12.390155206366577,
+      "p90_settled_error_m": 12.803323693872217,
+      "maximum_position_error_m": 18.570906129662625,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 900.0,
+      "condition": "mixed_radial_tangential",
+      "index": 1,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 12.291588701144965,
+      "median_settled_error_m": 12.390155206366577,
+      "p90_settled_error_m": 12.803323693872217,
+      "maximum_position_error_m": 18.570906129662625,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    }
+  ],
+  "runtime_s": 19.124796152114868,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}

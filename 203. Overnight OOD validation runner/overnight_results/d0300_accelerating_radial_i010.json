@@ -1,0 +1,61 @@
+{
+  "case_id": "d0300_accelerating_radial_i010",
+  "case": {
+    "distance_m": 300.0,
+    "condition_index": 0,
+    "condition": "accelerating_radial",
+    "mode": "accelerating_radial",
+    "index": 10
+  },
+  "rows": [
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 10,
+      "policy": "fixed_baseline",
+      "settled_rmse_m": 1.4666838485350364,
+      "median_settled_error_m": 1.3886862039776569,
+      "p90_settled_error_m": 1.7182190016758772,
+      "maximum_position_error_m": 1.8410153719777649,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 10,
+      "policy": "hop_baseline",
+      "settled_rmse_m": 1.6982647841882583,
+      "median_settled_error_m": 1.6377461810785818,
+      "p90_settled_error_m": 1.9565099760022913,
+      "maximum_position_error_m": 2.081670016972652,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 0,
+      "mean_transition_scale": 1.0
+    },
+    {
+      "distance_m": 300.0,
+      "condition": "accelerating_radial",
+      "index": 10,
+      "policy": "hop_transition_softR",
+      "settled_rmse_m": 1.698407241357325,
+      "median_settled_error_m": 1.6378672885764778,
+      "p90_settled_error_m": 1.956729572886236,
+      "maximum_position_error_m": 2.081977145058439,
+      "diverged": false,
+      "filter_exceptions": 0,
+      "transition_risk_count": 11,
+      "mean_transition_scale": 3.754628996793336
+    }
+  ],
+  "runtime_s": 9.95281195640564,
+  "config_snapshot": {
+    "geometry_seed_root": 2020000,
+    "ping_seed_root": 2023000,
+    "truth_usage": "truth is used for signal synthesis and final error computation only; filters use signal-extracted TOA/TDOA/DOA and runtime-observable quality metrics.",
+    "claim_boundary": "large OOD simulation validation; not real-water validation."
+  }
+}
