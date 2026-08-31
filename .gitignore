@@ -27,6 +27,9 @@ checkpoint/
 # Local manuscript workspace (do not publish paper sources/artifacts to GitHub)
 paper/
 
+# Local project operation tools (do not publish; reusable audit runners live here)
+tools/
+
 # LaTeX build artifacts
 *.aux
 *.log
